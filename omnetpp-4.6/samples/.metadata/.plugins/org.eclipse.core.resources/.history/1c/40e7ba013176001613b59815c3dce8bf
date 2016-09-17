@@ -1,0 +1,585 @@
+/***************************************************************************
+ * Archivo:        MySensorApp.cc
+ *
+ * Autor:      Juan Antonio Guerrero Ibáñez
+ *
+ * copyright:   (C) 2016
+ *
+ *              El presente programa genera un protocolo de comunicación
+ *              a nivel de capa de aplicación para transmisión de información en una red WSN.
+ ***************************************************************************
+ * part of:     framework implementation developed by tkn
+ * description: Generate periodic traffic addressed to a sink
+ **************************************************************************/
+
+#include "MySensorApp.h"
+#include <sstream>
+#include "BaseNetwLayer.h"
+#include "AddressingInterface.h"
+#include "NetwControlInfo.h"
+#include "FindModule.h"
+#include "SimpleAddress.h"
+#include "BaseWorldUtility.h"
+#include "ApplPkt_m.h"
+#include "HelloPkt_m.h"
+#include "ModuleAccess.h"
+#include "MassMobility.h"
+#include "StationaryMobility.h"
+
+Define_Module(MySensorApp);
+
+/**
+ * Proceso de inicialización del módulo de la aplicación, se inicializan
+ * las diferentes variables utilizadas en el módulo y finalmente se
+ * activa un temporizador para indicar el tiempo en el que se enviará
+ * el primer mensaje.
+  **/
+void MySensorApp::initialize(int stage) {
+    BaseLayer::initialize(stage);
+	if (stage == 0) {
+		BaseLayer::catPacketSignal.initialize();
+	    // Código ITSON START -----------------------------------------------------------------------
+	        numMiembros = 0;
+	        miembro = nullptr;
+
+	    // Código ITSON END --------------------------------------------------------------------------
+
+
+		debugEV<< "in initialize() stage 0...";
+		EV << "En función initialize() escenario 0. . ." << endl;
+		debug = par("debug");
+		stats = par("stats");
+		trace = par("trace");
+		nbPackets = par("nbPackets");
+		trafficParam = par("trafficParam");
+		initializationTime = par("initializationTime");
+		esperaInicializacion = par("esperaInicializacion");
+		esperaActualizacion = par("esperaActualizacion");
+		esperaActualizacionResp = par("esperaActualizacionResp");
+		broadcastPackets = par("broadcastPackets");
+		headerLength = par("headerLength");
+        TipoNodo = par("TipoNodo");  // Definimos el tipo de nodo que será
+		// application configuration
+		const char *traffic = par("trafficType");
+		destAddr = LAddress::L3Type(par("destAddr").longValue());
+		NumPaquete = 0;
+		nbPacketsSent = 0;
+		nbPacketsReceived = 0;
+		firstPacketGeneration = -1;
+		lastPacketReception = -2;
+		banderaInicializacion = 0;
+		banderaPadre = 0;
+		Listo = false;
+		configuracion = false; //Bandera que se activa hasta que ya se encendió el nodo
+		MyFather = -1;
+
+		initializeDistribution(traffic);  //Se manda llamar a la función que define como será el tipo de tráfico
+
+		delayTimer = new cMessage("appDelay", SEND_DATA_TIMER);
+
+		// get pointer to the world module
+		world = FindModule<BaseWorldUtility*>::findGlobalModule();
+
+	} else if (stage == 1) {
+		debugEV << "En initialize() Escenario 1...";
+        EV << "En función initialize() escenario 1. . ." << endl;
+		// Application address configuration: equals to host address
+
+		cModule *const pHost = findHost();
+		const cModule* netw  = FindModule<BaseNetwLayer*>::findSubModule(pHost);
+		if(!netw) {
+			netw = pHost->getSubmodule("netwl");
+			if(!netw) {
+				opp_error("No se pudo encontrar el módulo de la capa de Red. Esto significa que"
+				        " el módulo de capa de red no está presente o "
+				        "el módulo utilizado no es subclase de  "
+						  "BaseNetworkLayer.");
+			}
+			else
+			{
+		        debugEV << "Capa de red activa...";
+		        EV << "Capa de red Activa. . ." << endl;
+			}
+		}
+		const AddressingInterface *const addrScheme = FindModule<AddressingInterface*>::findSubModule(pHost);
+		if(addrScheme) {
+			myAppAddr = addrScheme->myNetwAddr(netw);
+		} else {
+			myAppAddr = LAddress::L3Type( netw->getId() );
+		}
+		sentPackets = 0;
+
+
+		if(nbPackets> 0)
+			scheduleAt(simTime() + uniform(initializationTime, initializationTime + trafficParam), delayTimer);
+		if (stats) {
+			latenciesRaw.setName("rawLatencies");
+			latenciesRaw.setUnit("s");
+			latency.setName("latency");
+		}
+	}
+}
+
+//Caracteristica crosslayer en la escucha de paquetes para nodo gateway y miembro
+int MySensorApp::gettipoNodo(void)
+{
+  return TipoNodo;
+}
+
+void MySensorApp::settipoNodo(int nro)
+{
+  TipoNodo=nro;
+}
+
+
+//Método extra
+void MySensorApp::printMembers(void){
+
+    EV << "TABLA DE MIEMBROS DEL CH: " << myAppAddr << endl;
+    EV << "Miembro \t ID" << endl;
+
+    Nodo *ptr = miembro;
+    int i = 0;
+
+    while(ptr){
+        EV << i+1 << "\t " << ptr->id << endl;
+        ptr = ptr->pNext;
+        i++;
+    }
+}
+
+
+cStdDev& MySensorApp::hostsLatency(const LAddress::L3Type& hostAddress)
+{
+	using std::pair;
+
+	if(latencies.count(hostAddress) == 0) {
+		std::ostringstream oss;
+		oss << hostAddress;
+		cStdDev aLatency(oss.str().c_str());
+		latencies.insert(pair<LAddress::L3Type, cStdDev>(hostAddress, aLatency));
+	}
+
+	return latencies[hostAddress];
+}
+
+void MySensorApp::initializeDistribution(const char* traffic) {
+	if (!strcmp(traffic, "periodic")) {
+		trafficType = PERIODIC;
+	} else if (!strcmp(traffic, "uniform")) {
+		trafficType = UNIFORM;
+	} else if (!strcmp(traffic, "exponential")) {
+		trafficType = EXPONENTIAL;
+	} else {
+		trafficType = UNKNOWN;
+		EV << "Error! Unknown traffic type: " << traffic << endl;
+	}
+}
+
+/**
+ * Proceso que verifica y procesa todos los mensajes recibidos por el modo.
+ * Se verifica los mensajes de HELLO, ACTUALIZACION DE CLUSTER y DATOS
+ **/
+void MySensorApp::handleLowerMsg(cMessage * msg) {
+	ApplPkt *m;
+	m = static_cast<ApplPkt *> (msg);
+    switch (msg->getKind()) {
+	case UPDT_RESPONSE:
+	//    EV << "NODO[" << myAppAddr <<"] recibe paquete UPDT_RESPONSE desde el NODO[" << m->getSrcAddr() << "]" << endl;
+	    if (MyFather == m->getSrcAddr()){
+	    EV << "El NODO[" << myAppAddr <<"] recibió paquete UPDT_RESPONSE desde el NODO[" << m->getSrcAddr() << "]" << endl;
+        banderaPadre = 1;
+	    }
+        delete msg;
+        break;
+	case UPDT_REQUEST:
+      if (TipoNodo > m->getTipoNodo()){
+           EV << "El NODO[" << myAppAddr <<"] recibió paquete UPDT_REQUEST desde el NODO[" << m->getSrcAddr() << "]" << endl;
+           EV << "EL NODO [" << myAppAddr << "] envía mensaje UPDT_RESPONSE al NODO[" << m->getSrcAddr() << "] " << endl;
+           m->setName("UPDT_RESPONSE");
+           m->setKind(UPDT_RESPONSE);
+           m->setDestAddr(m->getSrcAddr());
+           m->setSrcAddr(myAppAddr);
+           m->setByteLength(headerLength);
+           m->setTipoNodo(TipoNodo);
+           sendDown(m);
+           EV << "Paquete UPDT_RESPONSE enviado  !\n";
+      }
+      else
+      {
+          EV << "El NODO[" << myAppAddr <<"] recibió paquete UPDT_REQUEST desde el NODO[" << m->getSrcAddr() << "]" << endl;
+          EV << "El NODO[" << myAppAddr <<"] descarta mensaje UPDT_REQUEST del NODO[" << m->getSrcAddr() << "] porque es tipo " <<m->getTipoNodo() << " y  yo soy tipo " << TipoNodo << endl;
+          delete msg;
+      }
+	    break;
+
+	case HELLO_MESSAGE:
+	   // if (TipoNodo > m->getTipoNodo()){
+	    EV << "El NODO[" << myAppAddr <<"] recibió paquete HELLO desde el NODO[" << m->getSrcAddr() << "]" << endl;
+//	    if (configuracion == true){
+	    if (TipoNodo > MEMBER_NODE){
+	     // Proceso para crear tabla de registro de nodos
+	        if(TipoNodo == CLUSTER_HEAD){
+	             Nodo *newNode;
+	             if(miembro){
+	                 miembro->pNext = new Nodo;
+	                 newNode = miembro->pNext;
+	             }
+	             else{
+	                 miembro = new Nodo;
+	                 newNode = miembro;
+	             }
+	             newNode->id = (int)(m->getSrcAddr());
+	             newNode->latitud = m->getLatitud();
+	             newNode->longitud = m->getLongitud();
+	             newNode->pNext = nullptr;
+                 numMiembros++;
+                 EV << "El NODO[" << myAppAddr << "] agregó a su tabla de miembros al NODO[" << m->getSrcAddr() << "]" << endl;
+                 this->printMembers();
+	        }
+
+	        EV << "RESPONDIENDO mensaje HELLO del NODO[" << m->getSrcAddr() << "] porque es tipo " <<m->getTipoNodo() << " y  yo soy tipo " << TipoNodo << endl;
+	        m->setName("HELLO_RESPONSE");
+	        m->setKind(HELLO_RESPONSE);
+            m->setDestAddr(m->getSrcAddr());
+            m->setSrcAddr(myAppAddr);
+            m->setByteLength(headerLength);
+            m->setTipoNodo(TipoNodo);
+            EV << "El NODO[" << myAppAddr << "] es tipo " <<  TipoNodo << " y envía un paquete HELLO_RESPONSE hacia NODO[" << m->getDestAddr() << "]" << endl;
+            sendDown(m);
+            EV << "Paquete HELLO_RESPONSE enviado  !\n";
+	    }
+	    else
+	    {
+
+            if (TipoNodo == MEMBER_NODE){
+                  if((int)(m->getSrcAddr()) == MyFather)
+                  {
+                      EV << "El NODO[" << myAppAddr <<"] recibió paquete HELLO desde el NODO[" << m->getSrcAddr() << "] que es mi Padre" << endl;
+                      EV << "El NODO[" << myAppAddr <<"] perdió a su nodo padre, comienza proceso HELLO \n";
+                       TipoNodo = 0;
+                       MyFather = 0;
+                       banderaInicializacion = 0;
+                       sendHello();
+                    }
+              }
+            else
+            {
+	      //      EV << "El NODO[" << myAppAddr <<"] recibió paquete HELLO desde el NODO[" << m->getSrcAddr() << "]" << endl;
+	            EV << "El NODO[" << myAppAddr <<"] descarta mensaje HELLO del NODO[" << m->getSrcAddr() << "] porque es tipo " <<m->getTipoNodo() << " y  yo soy tipo " << TipoNodo << endl;
+            }
+	        delete msg;
+
+	    }
+	    break;
+
+    case HELLO_RESPONSE:
+        EV << "El NODO[" << myAppAddr << "]  recibió paquete HELLO_RESPONSE del NODO[" << m->getSrcAddr() << "]" << endl;
+        EV << "Su valor de TipoNodo es " << m->getTipoNodo() << endl;
+        if (m->getTipoNodo()== SINK_NODE) {
+            banderaInicializacion = 1;
+           EV << "El NODO[" << myAppAddr <<"] era tipo " << TipoNodo <<" y se convirtió en nodo " << CLUSTER_HEAD << endl;
+                   TipoNodo = CLUSTER_HEAD;
+                   MyFather = LAddress::L3Type( m->getSrcAddr() );
+                   Listo=true;
+                   EV << "El NODO[" << myAppAddr << "] está listo para comenzar la transmisión de datos \n";
+        }
+        else
+        {
+            if ((m->getTipoNodo()== CLUSTER_HEAD) and (banderaInicializacion ==0)) {
+                EV << "El NODO[" << myAppAddr << "] era tipo " << TipoNodo <<" y se convirtió en nodo " << MEMBER_NODE << endl;
+                        TipoNodo = MEMBER_NODE;
+                        banderaInicializacion = 1;
+                        MyFather = LAddress::L3Type( m->getSrcAddr() );
+                        //cancelAndDelete(Espera);
+                        Listo=true;
+                        EV << "El NODO[" << myAppAddr << "] está listo para comenzar la transmisión de datos \n";
+                    }
+        }
+        if ((Listo ==true) and TipoNodo != SINK_NODE)
+        {
+            TiempoActualizacion = new cMessage("EsperaACTU", UPDT_REQUEST);
+            scheduleAt(simTime() + esperaActualizacion, TiempoActualizacion);
+            EV << "Temporizador UPDATE_REQUEST activado !\n";
+            sendData();
+        }
+
+        delete msg;
+        break;
+
+        case DATA_MESSAGE:
+            m = static_cast<ApplPkt *> (msg);
+            nbPacketsReceived++;
+            packet.setPacketSent(false);
+            packet.setNbPacketsSent(0);
+            packet.setNbPacketsReceived(1);
+            packet.setHost(myAppAddr);
+            emit(BaseLayer::catPacketSignal, &packet);
+            if (stats) {
+                simtime_t theLatency = m->getArrivalTime() - m->getCreationTime();
+                if(trace) {
+                  hostsLatency(m->getSrcAddr()).collect(theLatency);
+                  latenciesRaw.record(SIMTIME_DBL(theLatency));
+                }
+                latency.collect(theLatency);
+                if (firstPacketGeneration < 0)
+                    firstPacketGeneration = m->getCreationTime();
+                lastPacketReception = m->getArrivalTime();
+                if(trace) {
+                  debugEV<< "El NODO [" << myAppAddr << "] recibió un paquete #" << m->getNumPaquete() << " del NODO[" << m->getSrcAddr()
+                  << "], tuvo una LATENCIA=" << theLatency
+                  << ", collected " << hostsLatency(m->getSrcAddr()).
+                  getCount() << "el retardo medio es ahora: " << hostsLatency(m->getSrcAddr()).
+                  getMean() << endl;
+//                  EV<< "se recibió un paquete del NODO[" << m->getSrcAddr()
+//                  << "], tuvo una LATENCIA=" << theLatency
+//                  << ", collected " << hostsLatency(m->getSrcAddr()).
+//                  getCount() << "el retardo medio es ahora: " << hostsLatency(m->getSrcAddr()).
+//                  getMean() << endl;
+                } else {
+                    debugEV<< "El NODO [" << myAppAddr << "] recibió un paquete #" << m->getNumPaquete() << " del NODO[" << m->getSrcAddr()
+                    << "], tuvo una LATENCIA=" << theLatency << endl;
+                }
+            }
+            delete msg;
+
+            //  sendReply(m);
+            break;
+
+	default:
+		EV << "Error! se obtuvo un paquete con tipo desconocido: " << msg->getKind() << endl;
+		delete msg;
+		break;
+	}
+}
+
+/**
+ * Procedimiento para manejar los diferentes temporizadores que se
+ * activan al momento de enviar los diferentes mensajes del protocolo
+ **/
+void MySensorApp::handleSelfMsg(cMessage * msg) {
+	switch (msg->getKind()) {
+	case NEXT_PAQ:         // Temporizador para enviar el siguiente paquete de DATOS
+	   if (Listo==true)
+	      sendData();
+	   delete msg;
+	break;
+
+	case UPDT_REQUEST:     // Temporizador para activar la actualización de NODO PADRE, esta se basa en el valor especificado en el parámetro esperaActualizacion
+	   sendUpdate();
+	   delete msg;
+	break;
+
+	case UPDT_TIMER:       // Temporizador de Espera para recibir respuesta de NODO PADRE de acuerdo al valor especificado en el parámetro esperaActualizacionResp
+	   EV << "El NODO[" << myAppAddr << "] recibió un mensaje UPDT_TIMER y la banderaPadre es = " << banderaPadre << endl;
+	   if (banderaPadre == 0) {
+	         EV << "El NODO[" << myAppAddr << "] vuelve a enviar paquete HELLO \n";
+	         TipoNodo = DISCONNECTED;
+	         Listo = false;
+	         sendHello();
+	         delete msg;
+	      }
+	   else
+	      {
+	         EV << "El NODO[" << myAppAddr << "] confirma su NODO PADRE (NODO[" << MyFather << "] \n";
+	         delete msg;
+	         TiempoActualizacion = new cMessage("EsperaACTU", UPDT_TIMER);
+	         scheduleAt(simTime() + esperaActualizacion, TiempoActualizacion);
+	         EV << "Activando nuevamente el Temporizador UPDATE_TIMER  !\n";
+	      }
+    break;
+
+	case HELLO_TIMER:       // Temporizador de Espera para recibir respuesta HELLO_RESPONSE
+	   EV << "El NODO[" << myAppAddr << "] recibió un mensaje HELLO_TIMER y la bandera es = " << banderaInicializacion << endl;
+       if (banderaInicializacion == 0) {
+	         EV << "El NODO[" << myAppAddr << "] vuelve a enviar paquete HELLO \n";
+	         sendHello();
+	         delete msg;
+	      }
+	   else
+	      {
+	         EV << "El NODO[" << myAppAddr << "] Ya se forma parte de un cluster . . .\n";
+	         delete msg;
+	      }
+
+	break;
+
+	case SEND_DATA_TIMER:  // Temporizador de Espera para comenzar la transmisión de mensajes
+	   EV << "NODO["<< myAppAddr <<"] ENCENDIDO... Inicia proceso de incialización.... \n";
+	   configuracion = true;
+	   sendHello();
+	   delete msg;
+	break;
+
+	default:
+	   EV<< "Tipo de mensaje desconocido! -> eliminado, kind: " << msg->getKind() << endl;
+	   delete msg;
+	break;
+	}
+}
+
+void MySensorApp::handleLowerControl(cMessage * msg) {
+	delete msg;
+}
+
+/**
+  * Proceso que crea un mensaje HELLO y lo envía a la capa de red
+  * para ser enviado a todos los nodos de la red y esperar la respuesta
+  * que le permita pertenecer al cluster.
+ **/
+void MySensorApp::sendHello() {
+
+        ApplPkt *pkt = new ApplPkt("HELLO_MESSAGE", HELLO_MESSAGE);
+        pkt->setDestAddr(LAddress::L3BROADCAST);
+        pkt->setSrcAddr(myAppAddr);
+        pkt->setByteLength(headerLength);
+        pkt->setTipoNodo(TipoNodo);
+
+        // ------------ Código localizacion ------------------------- //
+
+        cModule* parentmod = getParentModule();
+        cModule* mobilitymod = parentmod->getSubmodule("mobility");
+        MassMobility* massMobilityMod = dynamic_cast<MassMobility*>(mobilitymod);
+        if (massMobilityMod == nullptr)
+                throw cRuntimeError("MODULO MOBILITY is not found");
+        else
+        {
+          double latitud = massMobilityMod->getCurrentPosition().x;
+          double longitud = massMobilityMod->getCurrentPosition().y;
+          pkt->setLatitud(latitud);
+          pkt->setLongitud(longitud);
+        }
+        // ----------- Fin del código localizacion -------------------------------------------
+
+
+        // set the control info to tell the network layer the layer 3 address
+        NetwControlInfo::setControlInfo(pkt, pkt->getDestAddr());
+        EV << "El nodo[" << myAppAddr <<"] envía paquete HELLO hacia " << pkt->getDestAddr() << endl;
+        sendDown(pkt);
+        Espera = new cMessage("EsperaINIT", HELLO_TIMER);
+        scheduleAt(simTime() + esperaInicializacion, Espera);
+        EV << "Paquete HELLO enviado !. Esperando recibir respuesta de algún nodo...\n";
+}
+
+/**
+  * Proceso que crea un mensaje UPDT_RESQUEST y lo envía a la capa de red
+  * para ser enviado a su nodo padre y establecer si todavía está a su
+  * alcance.
+ **/
+void MySensorApp::sendUpdate() {
+
+        ApplPkt *pkt = new ApplPkt("UPDT_REQUEST", UPDT_REQUEST);
+        pkt->setDestAddr(MyFather);
+        pkt->setSrcAddr(myAppAddr);
+        pkt->setByteLength(headerLength);
+        pkt->setTipoNodo(TipoNodo);
+        // set the control info to tell the network layer the layer 3 address
+        NetwControlInfo::setControlInfo(pkt, pkt->getDestAddr());
+        EV << "El nodo[" << myAppAddr <<"] envía paquete UPDATE_REQUEST hacia " << pkt->getDestAddr() << endl;
+        sendDown(pkt);
+        TiempoActualizacionResp = new cMessage("EsperaUDPT", UPDT_TIMER);
+        scheduleAt(simTime() + esperaActualizacionResp, TiempoActualizacionResp);
+        EV << "Esperando recibir respuesta de nodo padre...\n";
+}
+
+
+/**
+  * Proceso que maneja la creación de un nuevo mensaje de DATOS para ser
+  * enviado al nodo destino (en nuestro caso es el nodo 0). El proceso
+  * genera el temporizador de espera basado en el formato de tráfico
+  * que se especificó en el parámetro trafficParam.
+ **/
+void MySensorApp::scheduleNextPacket() {
+    if (nbPackets > sentPackets && trafficType != 0) { // We must generate packets
+
+        simtime_t waitTime = SIMTIME_ZERO;
+
+        switch (trafficType) {
+        case PERIODIC:
+            waitTime = trafficParam;
+       //     debugEV<< "Tráfico PERIODICO, waitTime=" << waitTime << endl;
+            break;
+            case UNIFORM:
+            waitTime = uniform(0, trafficParam);
+      //      debugEV << "Tráfico UNIFORME, waitTime=" << waitTime << endl;
+            break;
+            case EXPONENTIAL:
+            waitTime = exponential(trafficParam);
+      //      debugEV << "Tráfico EXPONENCIAL, waitTime=" << waitTime << endl;
+            break;
+            case UNKNOWN:
+            default:
+            EV <<
+            "No se puede generar el tipo de tráfico solicitado(no implementado o desconocido)."
+            << endl;
+            return;
+            break;
+        }
+        EV << "Iniciando el temporizador para un nuevo paquete en " << waitTime << " segundos." <<
+        endl;
+        TiempoPaquete = new cMessage("EsperaPAQ", NEXT_PAQ);
+        scheduleAt(simTime() + waitTime, TiempoPaquete);
+        debugEV << "...temporizador reprogramado." << endl;
+    } else {
+        EV << "Ya se enviaron todos los paquetes establecidos.\n";
+    }
+}
+
+void MySensorApp::sendData() {
+    ApplPkt *pkt = new ApplPkt("DATA", DATA_MESSAGE);
+    NumPaquete++;
+    pkt->setDestAddr(destAddr);
+    pkt->setSrcAddr(myAppAddr);
+    pkt->setByteLength(headerLength);
+    pkt->setNumPaquete(NumPaquete);
+
+    // set the control info to tell the network layer the layer 3 address
+    NetwControlInfo::setControlInfo(pkt, pkt->getDestAddr());
+
+    sendDown(pkt);
+    nbPacketsSent++;
+    packet.setPacketSent(true);
+    packet.setNbPacketsSent(1);
+    packet.setNbPacketsReceived(0);
+    packet.setHost(myAppAddr);
+    emit(BaseLayer::catPacketSignal, &packet);
+    sentPackets++;
+    EV << "El NODO[" << myAppAddr << "] envió el paquete de datos número " << NumPaquete << endl;
+    scheduleNextPacket();
+}
+
+void MySensorApp::finish() {
+	using std::map;
+
+	EV << "Soy el nodo " << myAppAddr << " y me quedé como nodo " << TipoNodo << " y mi Padre es " << MyFather << endl;
+	if (stats) {
+		if (trace) {
+			std::stringstream osToStr(std::stringstream::out);
+			// output logs to scalar file
+			for (map<LAddress::L3Type, cStdDev>::iterator it = latencies.begin(); it != latencies.end(); ++it) {
+				cStdDev aLatency = it->second;
+
+				osToStr.str(""); osToStr << "latencia" << it->first;
+				recordScalar(osToStr.str().c_str(), aLatency.getMean(), "s");
+				aLatency.record();
+			}
+		}
+		recordScalar("activity duration", lastPacketReception
+				- firstPacketGeneration, "s");
+		recordScalar("firstPacketGeneration", firstPacketGeneration, "s");
+		recordScalar("lastPacketReception", lastPacketReception, "s");
+		recordScalar("nbPacketsSent", nbPacketsSent);
+		recordScalar("nbPacketsReceived", nbPacketsReceived);
+		latency.record();
+	}
+	cComponent::finish();
+}
+
+MySensorApp::~MySensorApp() {
+/*	cancelAndDelete(delayTimer);
+	cancelAndDelete(Espera);
+	cancelAndDelete(TiempoPaquete);
+	cancelAndDelete(TiempoActualizacion);
+	cancelAndDelete(TiempoActualizacionResp);
+*/
+}

@@ -1,0 +1,8 @@
+16:50:01 **** Build of configuration gcc-debug for project IEEE802154INET-Standalone ****
+make MODE=debug CONFIGNAME=gcc-debug -j8 all 
+cd src && make
+make[1]: Entering directory '/home/telemedicina/git/IEEE802154INET-Standalone/src'
+make[1]: Leaving directory '/home/telemedicina/git/IEEE802154INET-Standalone/src'
+
+16:50:01 Build Finished (took 60ms)
+

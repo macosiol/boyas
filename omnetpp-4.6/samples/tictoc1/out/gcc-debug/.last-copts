@@ -1,0 +1,1 @@
+-g -Wall -fPIC  -fno-stack-protector -DHAVE_SWAPCONTEXT -DXMLPARSER=libxml -DWITH_PARSIM -DWITH_NETBUILDER  -I. -I/home/telemedicina/omnet46/omnetpp-4.6/include

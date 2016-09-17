@@ -1,0 +1,926 @@
+16:32:52 **** Build of configuration gcc-debug for project IEEE802154INET-Standalone-master ****
+make MODE=debug CONFIGNAME=gcc-debug -j8 all 
+cd src && make
+make[1]: Entering directory '/home/telemedicina/omnet46/omnetpp-4.6/samples/IEEE802154INET-Standalone-master/src'
+MSGC: util/mcpsData.msg
+MSGC: util/MPDU.msg
+MSGC: util/PPDU.msg
+util/MacPIB.cc
+util/macFrameControlField.cc
+util/MACAddressExt.cc
+util/PhyPIB.cc
+Modules/msgBuffer.cc
+util/mcpsData_m.cc
+util/PPDU_m.cc
+Modules/sscs.cc
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/simtime_t.h:24:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cexception.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:21,
+                 from util/macFrameControlField.cc:19:
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_S’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/simtime_t.h:24:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cexception.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:21,
+                 from ../../inet/src/inet/common/INETDefs.h:28,
+                 from util/MACAddressExt.h:26,
+                 from util/MacPIB.h:25,
+                 from util/MacPIB.cc:21:
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_S’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:107:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_S;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_MS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:108:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_MS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_US’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:109:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_US;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_NS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:110:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_NS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_PS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:111:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_PS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_FS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:112:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_FS;
+                                     ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/simtime_t.h:24:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cexception.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:21,
+                 from ../../inet/src/inet/common/INETDefs.h:28,
+                 from util/MACAddressExt.h:26,
+                 from util/MACAddressExt.cc:22:
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_S’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:107:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_S;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_MS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:108:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_MS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_US’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:109:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_US;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_NS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:110:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_NS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_PS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:111:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_PS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_FS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:112:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_FS;
+                                     ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/simtime_t.h:24:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cexception.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:21,
+                 from util/PhyPIB.h:26,
+                 from util/PhyPIB.cc:21:
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_S’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:107:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_S;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_MS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:108:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_MS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_US’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:109:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_US;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_NS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:110:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_NS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_PS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:111:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_PS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_FS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:112:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_FS;
+                                     ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/simtime_t.h:24:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cexception.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:21,
+                 from Modules/msgBuffer.h:22,
+                 from Modules/msgBuffer.cc:19:
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_S’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:107:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_S;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_MS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:108:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_MS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_US’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:109:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_US;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_NS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:110:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_NS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_PS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:111:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_PS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_FS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:112:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_FS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:107:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_S;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_MS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:108:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_MS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_US’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:109:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_US;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_NS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:110:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_NS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_PS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:111:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_PS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_FS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:112:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_FS;
+                                     ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/simtime_t.h:24:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cexception.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:21,
+                 from util/mcpsData_m.h:8,
+                 from Modules/sscs.h:22,
+                 from Modules/sscs.cc:18:
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_S’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/simtime_t.h:24:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cexception.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:21,
+                 from util/mcpsData_m.h:8,
+                 from util/mcpsData_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_S’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:107:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_S;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_MS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:108:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_MS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_US’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:109:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_US;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_NS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:110:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_NS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_PS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:111:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_PS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_FS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:112:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_FS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:107:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_S;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_MS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:108:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_MS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_US’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:109:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_US;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_NS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:110:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_NS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_PS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:111:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_PS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_FS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:112:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_FS;
+                                     ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:50:0,
+                 from util/PhyPIB.h:26,
+                 from util/PhyPIB.cc:21:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:82:56: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         Iterator(const cLinkedList& q, bool athead=true)
+                                                        ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:88:57: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         void init(const cLinkedList& q, bool athead=true)
+                                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:127:39: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     void copy(const cLinkedList& other);
+                                       ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:154:41: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList(const cLinkedList& llist);
+                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:32: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h: In member function ‘virtual cLinkedList* cLinkedList::dup() const’:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:51: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                                   ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:50:0,
+                 from ../../inet/src/inet/common/INETDefs.h:28,
+                 from util/MACAddressExt.h:26,
+                 from util/MacPIB.h:25,
+                 from util/MacPIB.cc:21:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:82:56: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         Iterator(const cLinkedList& q, bool athead=true)
+                                                        ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:88:57: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         void init(const cLinkedList& q, bool athead=true)
+                                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:127:39: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     void copy(const cLinkedList& other);
+                                       ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:154:41: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList(const cLinkedList& llist);
+                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:50:0,
+                 from Modules/msgBuffer.h:22,
+                 from Modules/msgBuffer.cc:19:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:82:56: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         Iterator(const cLinkedList& q, bool athead=true)
+                                                        ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:88:57: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         void init(const cLinkedList& q, bool athead=true)
+                                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:127:39: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     void copy(const cLinkedList& other);
+                                       ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:154:41: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList(const cLinkedList& llist);
+                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:32: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h: In member function ‘virtual cLinkedList* cLinkedList::dup() const’:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:51: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                                   ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:32: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h: In member function ‘virtual cLinkedList* cLinkedList::dup() const’:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:51: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                                   ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:50:0,
+                 from util/macFrameControlField.cc:19:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:82:56: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         Iterator(const cLinkedList& q, bool athead=true)
+                                                        ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:88:57: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         void init(const cLinkedList& q, bool athead=true)
+                                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:127:39: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     void copy(const cLinkedList& other);
+                                       ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:50:0,
+                 from ../../inet/src/inet/common/INETDefs.h:28,
+                 from util/MACAddressExt.h:26,
+                 from util/MACAddressExt.cc:22:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:82:56: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         Iterator(const cLinkedList& q, bool athead=true)
+                                                        ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:154:41: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList(const cLinkedList& llist);
+                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:32: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h: In member function ‘virtual cLinkedList* cLinkedList::dup() const’:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:51: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                                   ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:88:57: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         void init(const cLinkedList& q, bool athead=true)
+                                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:127:39: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     void copy(const cLinkedList& other);
+                                       ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:154:41: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList(const cLinkedList& llist);
+                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:32: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h: In member function ‘virtual cLinkedList* cLinkedList::dup() const’:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:51: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                                   ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/simtime_t.h:24:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cexception.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:21,
+                 from util/PPDU_m.h:8,
+                 from util/PPDU_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_S’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:107:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_S;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_MS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:108:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_MS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_US’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:109:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_US;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_NS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:110:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_NS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_PS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:111:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_PS;
+                                     ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_FS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/simtime.h:112:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_FS;
+                                     ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:50:0,
+                 from util/mcpsData_m.h:8,
+                 from Modules/sscs.h:22,
+                 from Modules/sscs.cc:18:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:82:56: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         Iterator(const cLinkedList& q, bool athead=true)
+                                                        ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:88:57: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         void init(const cLinkedList& q, bool athead=true)
+                                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:127:39: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     void copy(const cLinkedList& other);
+                                       ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:154:41: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList(const cLinkedList& llist);
+                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:32: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h: In member function ‘virtual cLinkedList* cLinkedList::dup() const’:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:51: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                                   ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:50:0,
+                 from util/mcpsData_m.h:8,
+                 from util/mcpsData_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:82:56: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         Iterator(const cLinkedList& q, bool athead=true)
+                                                        ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:88:57: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         void init(const cLinkedList& q, bool athead=true)
+                                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:127:39: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     void copy(const cLinkedList& other);
+                                       ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:154:41: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList(const cLinkedList& llist);
+                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:32: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h: In member function ‘virtual cLinkedList* cLinkedList::dup() const’:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:51: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                                   ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+Modules/IEEE802154Mac.cc
+Modules/llc.cc
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:50:0,
+                 from util/PPDU_m.h:8,
+                 from util/PPDU_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:82:56: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         Iterator(const cLinkedList& q, bool athead=true)
+                                                        ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:88:57: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         void init(const cLinkedList& q, bool athead=true)
+                                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:127:39: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     void copy(const cLinkedList& other);
+                                       ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:154:41: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList(const cLinkedList& llist);
+                                         ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:32: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h: In member function ‘virtual cLinkedList* cLinkedList::dup() const’:
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:184:51: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                                   ^
+/home/telemedicina/omnet46/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+Modules/IEEE802154Radio.cc
+In file included from Modules/IEEE802154Mac.cc:20:0:
+Modules/IEEE802154Mac.h:37:24: fatal error: RadioState.h: No such file or directory
+compilation terminated.
+Makefile:121: recipe for target '../out/gcc-debug/src/Modules/IEEE802154Mac.o' failed
+make[1]: *** [../out/gcc-debug/src/Modules/IEEE802154Mac.o] Error 1
+make[1]: *** Waiting for unfinished jobs....
+In file included from Modules/IEEE802154Radio.cc:24:0:
+Modules/IEEE802154Radio.h:25:27: fatal error: ChannelAccess.h: No such file or directory
+Makefile:121: recipe for target '../out/gcc-debug/src/Modules/IEEE802154Radio.o' failed
+compilation terminated.
+make[1]: *** [../out/gcc-debug/src/Modules/IEEE802154Radio.o] Error 1
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/ccomponent.h:25:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:26,
+                 from util/mcpsData_m.h:8,
+                 from util/mcpsData_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/cenvir.h: In instantiation of ‘cEnvir& cEnvir::operator<<(const T&) [with T = char [8]]’:
+../../inet/src/inet/common/INETDefs.h:104:5:   required from here
+/home/telemedicina/omnet46/omnetpp-4.6/include/cenvir.h:522:62: error: ambiguous overload for ‘operator<<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘const char [8]’)
+     template<typename T> cEnvir& operator<<(const T& t) {out << t; return *this;}
+                                                              ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^
+/usr/include/c++/5/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/cexception.h:28:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:21,
+                 from util/mcpsData_m.h:8,
+                 from util/mcpsData_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/opp_string.h:152:22: note: candidate: std::ostream& operator<<(std::ostream&, const opp_string&)
+ inline std::ostream& operator<<(std::ostream& out, const opp_string& s)
+                      ^
+util/mcpsData_m.cc:54:22: note: candidate: std::ostream& operator<<(std::ostream&, const T&) [with T = char [8]; std::ostream = std::basic_ostream<char>]
+ inline std::ostream& operator<<(std::ostream& out,const T&) {return out;}
+                      ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:556:5: note: candidate: std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*) [with _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+In file included from /usr/include/c++/5/ostream:638:0,
+                 from /usr/include/c++/5/iostream:39,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/bits/ostream.tcc:321:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*) [with _CharT = char; _Traits = std::char_traits<char>]
+Makefile:121: recipe for target '../out/gcc-debug/src/Modules/llc.o' failed
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:539:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/ccomponent.h:25:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:26,
+                 from util/mcpsData_m.h:8,
+                 from util/mcpsData_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/cenvir.h: In instantiation of ‘cEnvir& cEnvir::operator<<(const T&) [with T = char [15]]’:
+../../inet/src/inet/common/INETDefs.h:104:17:   required from here
+/home/telemedicina/omnet46/omnetpp-4.6/include/cenvir.h:522:62: error: ambiguous overload for ‘operator<<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘const char [15]’)
+     template<typename T> cEnvir& operator<<(const T& t) {out << t; return *this;}
+                                                              ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^
+/usr/include/c++/5/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/cexception.h:28:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:21,
+                 from util/mcpsData_m.h:8,
+                 from util/mcpsData_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/opp_string.h:152:22: note: candidate: std::ostream& operator<<(std::ostream&, const opp_string&)
+ inline std::ostream& operator<<(std::ostream& out, const opp_string& s)
+                      ^
+util/mcpsData_m.cc:54:22: note: candidate: std::ostream& operator<<(std::ostream&, const T&) [with T = char [15]; std::ostream = std::basic_ostream<char>]
+ inline std::ostream& operator<<(std::ostream& out,const T&) {return out;}
+                      ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:556:5: note: candidate: std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*) [with _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+In file included from /usr/include/c++/5/ostream:638:0,
+                 from /usr/include/c++/5/iostream:39,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/bits/ostream.tcc:321:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*) [with _CharT = char; _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:539:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/ccomponent.h:25:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:26,
+                 from util/mcpsData_m.h:8,
+                 from util/mcpsData_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/cenvir.h: In instantiation of ‘cEnvir& cEnvir::operator<<(const T&) [with T = const char*]’:
+../../inet/src/inet/common/INETDefs.h:104:37:   required from here
+/home/telemedicina/omnet46/omnetpp-4.6/include/cenvir.h:522:62: error: ambiguous overload for ‘operator<<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘const char* const’)
+     template<typename T> cEnvir& operator<<(const T& t) {out << t; return *this;}
+                                                              ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^
+/usr/include/c++/5/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/cexception.h:28:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:21,
+                 from util/mcpsData_m.h:8,
+                 from util/mcpsData_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/opp_string.h:152:22: note: candidate: std::ostream& operator<<(std::ostream&, const opp_string&)
+ inline std::ostream& operator<<(std::ostream& out, const opp_string& s)
+                      ^
+util/mcpsData_m.cc:54:22: note: candidate: std::ostream& operator<<(std::ostream&, const T&) [with T = const char*; std::ostream = std::basic_ostream<char>]
+ inline std::ostream& operator<<(std::ostream& out,const T&) {return out;}
+                      ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:556:5: note: candidate: std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*) [with _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+In file included from /usr/include/c++/5/ostream:638:0,
+                 from /usr/include/c++/5/iostream:39,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/bits/ostream.tcc:321:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*) [with _CharT = char; _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:539:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/ccomponent.h:25:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:26,
+                 from util/mcpsData_m.h:8,
+                 from util/mcpsData_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/cenvir.h: In instantiation of ‘cEnvir& cEnvir::operator<<(const T&) [with T = char [3]]’:
+../../inet/src/inet/common/INETDefs.h:104:45:   required from here
+/home/telemedicina/omnet46/omnetpp-4.6/include/cenvir.h:522:62: error: ambiguous overload for ‘operator<<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘const char [3]’)
+     template<typename T> cEnvir& operator<<(const T& t) {out << t; return *this;}
+                                                              ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^
+/usr/include/c++/5/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/cexception.h:28:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:21,
+                 from util/mcpsData_m.h:8,
+                 from util/mcpsData_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/opp_string.h:152:22: note: candidate: std::ostream& operator<<(std::ostream&, const opp_string&)
+ inline std::ostream& operator<<(std::ostream& out, const opp_string& s)
+                      ^
+util/mcpsData_m.cc:54:22: note: candidate: std::ostream& operator<<(std::ostream&, const T&) [with T = char [3]; std::ostream = std::basic_ostream<char>]
+ inline std::ostream& operator<<(std::ostream& out,const T&) {return out;}
+                      ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:556:5: note: candidate: std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*) [with _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+In file included from /usr/include/c++/5/ostream:638:0,
+                 from /usr/include/c++/5/iostream:39,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/bits/ostream.tcc:321:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*) [with _CharT = char; _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:539:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/ccomponent.h:25:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:26,
+                 from util/mcpsData_m.h:8,
+                 from util/mcpsData_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/cenvir.h: In instantiation of ‘cEnvir& cEnvir::operator<<(const T&) [with T = char [2]]’:
+../../inet/src/inet/common/INETDefs.h:104:105:   required from here
+/home/telemedicina/omnet46/omnetpp-4.6/include/cenvir.h:522:62: error: ambiguous overload for ‘operator<<’ (operand types are ‘std::ostream {aka std::basic_ostream<char>}’ and ‘const char [2]’)
+     template<typename T> cEnvir& operator<<(const T& t) {out << t; return *this;}
+                                                              ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^
+/usr/include/c++/5/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^
+In file included from /home/telemedicina/omnet46/omnetpp-4.6/include/cexception.h:28:0,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnet46/omnetpp-4.6/include/omnetpp.h:21,
+                 from util/mcpsData_m.h:8,
+                 from util/mcpsData_m.cc:13:
+/home/telemedicina/omnet46/omnetpp-4.6/include/opp_string.h:152:22: note: candidate: std::ostream& operator<<(std::ostream&, const opp_string&)
+ inline std::ostream& operator<<(std::ostream& out, const opp_string& s)
+                      ^
+util/mcpsData_m.cc:54:22: note: candidate: std::ostream& operator<<(std::ostream&, const T&) [with T = char [2]; std::ostream = std::basic_ostream<char>]
+ inline std::ostream& operator<<(std::ostream& out,const T&) {return out;}
+                      ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:556:5: note: candidate: std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*) [with _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+In file included from /usr/include/c++/5/ostream:638:0,
+                 from /usr/include/c++/5/iostream:39,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/bits/ostream.tcc:321:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*) [with _CharT = char; _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from util/mcpsData_m.cc:11:
+/usr/include/c++/5/ostream:539:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>]
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+In file included from Modules/llc.cc:19:0:
+Modules/llc.h:28:25: fatal error: IPvXAddress.h: No such file or directory
+compilation terminated.
+make[1]: *** [../out/gcc-debug/src/Modules/llc.o] Error 1
+Makefile:121: recipe for target '../out/gcc-debug/src/util/mcpsData_m.o' failed
+make[1]: *** [../out/gcc-debug/src/util/mcpsData_m.o] Error 1
+make[1]: Leaving directory '/home/telemedicina/omnet46/omnetpp-4.6/samples/IEEE802154INET-Standalone-master/src'
+Makefile:2: recipe for target 'all' failed
+make: *** [all] Error 2
+
+16:32:53 Build Finished (took 1s.63ms)
+

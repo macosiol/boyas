@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.omnetpp.ned.editor.graph.dialogs.PropertiesDialog:simple-module">
+		<item value="641" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="1" key="activePage"/>
+		<item value="595" key="DIALOG_HEIGHT"/>
+		<item value="475" key="DIALOG_X_ORIGIN"/>
+		<item value="259" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

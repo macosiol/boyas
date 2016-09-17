@@ -1,0 +1,5 @@
+# Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
+config default-configname	{}
+config default-runnumber	{}
+inspector simulation.scheduled-events.tic-4-to-0 PktBoya 664 1 464x316+2150+738:normal
+

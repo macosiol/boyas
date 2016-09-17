@@ -1,0 +1,4 @@
+#Tue Aug 09 12:30:56 PDT 2016
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=namespace

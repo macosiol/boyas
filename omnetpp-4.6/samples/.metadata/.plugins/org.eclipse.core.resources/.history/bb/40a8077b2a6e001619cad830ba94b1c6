@@ -1,0 +1,33 @@
+//**************************************************************************
+// * file:        Mac802154Pkt.msg
+// *
+// * author:      MAC
+// * copyright:   (c) by 'the Glimmer Twins'
+// *              Telecommunication Networks Group
+// *              UABC Ensenada
+// * email:       cosio.maria@uabc.edu.mx
+// **************************************************************************
+// * part of:     framework implementation developed by tkn
+// *************************************************************************/
+
+cplusplus {{
+#include "MiXiMMacPkt.h"
+}}
+
+
+class Mac154Pkt;
+
+//
+// Defines all fields of an 802.11 MAC frame
+//
+packet Mac802154Pkt extends MacPkt
+{
+    int address3;
+    int address4;
+    int fragmentation; //part of the Frame Control field
+    int informationDS; //part of the Frame Control field
+    int sequenceControl;
+    bool retry;
+    simtime_t duration; 	//the expected remaining duration the current transaction 
+						//(RTS->CTS->DATA->ACK) between two macs will occupy the channel 
+}

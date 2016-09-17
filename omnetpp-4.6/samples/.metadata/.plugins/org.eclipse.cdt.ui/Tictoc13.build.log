@@ -1,0 +1,5 @@
+10:01:11 **** Build of configuration gcc-debug for project Tictoc13 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+
+10:01:11 Build Finished (took 69ms)
+

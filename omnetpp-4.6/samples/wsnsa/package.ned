@@ -1,0 +1,3 @@
+package wsnsa;
+
+@license(LGPL);

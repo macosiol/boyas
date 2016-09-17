@@ -1,0 +1,528 @@
+version 2
+run General-0-20160908-19:01:44-7806
+attr configname General
+attr datetime 20160908-19:01:44
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network MisBoyas
+attr processid 7806
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar MisBoyas.node[0].nic.mac 	nbTxFrames 	10
+scalar MisBoyas.node[0].nic.mac 	nbRxFrames 	13
+scalar MisBoyas.node[0].nic.mac 	nbDroppedFrames 	0
+scalar MisBoyas.node[0].nic.mac 	nbMissedAcks 	0
+scalar MisBoyas.node[0].nic.mac 	nbRecvdAcks 	0
+scalar MisBoyas.node[0].nic.mac 	nbTxAcks 	0
+scalar MisBoyas.node[0].nic.mac 	nbDuplicates 	0
+scalar MisBoyas.node[0].nic.mac 	meanBackoff 	0.0012307692307692
+scalar MisBoyas.node[0].nic.mac 	nbBackoffs 	13
+scalar MisBoyas.node[0].nic.mac 	backoffDurations 	0.016
+scalar MisBoyas.node[0].nic.phy 	nbFramesWithInterference 	0
+scalar MisBoyas.node[0].nic.phy 	nbFramesWithoutInterference 	15
+scalar MisBoyas.node[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar MisBoyas.node[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar MisBoyas.node[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar MisBoyas.node[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar MisBoyas.node[0].netwl 	nbDataPacketsForwarded 	9
+scalar MisBoyas.node[0].netwl 	nbDataPacketsReceived 	9
+scalar MisBoyas.node[0].netwl 	nbDataPacketsSent 	0
+scalar MisBoyas.node[0].netwl 	nbDuplicatedFloodsReceived 	6
+scalar MisBoyas.node[0].netwl 	nbFloodsSent 	1
+scalar MisBoyas.node[0].netwl 	nbPureUnicastSent 	0
+scalar MisBoyas.node[0].netwl 	nbRouteFloodsSent 	1
+scalar MisBoyas.node[0].netwl 	nbRouteFloodsReceived 	0
+scalar MisBoyas.node[0].netwl 	nbUnicastFloodForwarded 	0
+scalar MisBoyas.node[0].netwl 	nbPureUnicastForwarded 	0
+scalar MisBoyas.node[0].netwl 	nbGetRouteFailures 	0
+scalar MisBoyas.node[0].netwl 	nbRoutesRecorded 	0
+scalar MisBoyas.node[0].netwl 	meanNbHops 	0.55555555555556
+scalar MisBoyas.node[0].tranl 	nbAggrPktReceived 	0
+scalar MisBoyas.node[0].tranl 	"nbAggrPktSentDown " 	0
+scalar MisBoyas.node[0].appl 	"activity duration" 	-1
+attr unit  s
+scalar MisBoyas.node[0].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar MisBoyas.node[0].appl 	lastPacketReception 	-2
+attr unit  s
+scalar MisBoyas.node[0].appl 	nbPacketsSent 	0
+scalar MisBoyas.node[0].appl 	nbPacketsReceived 	0
+statistic MisBoyas.node[0].appl 	latency
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+scalar MisBoyas.node[0].batteryStats 	nominal 	1187988120
+attr unit  mW-s
+scalar MisBoyas.node[0].batteryStats 	total 	3722.2758145332
+attr unit  mW-s
+scalar MisBoyas.node[0].batteryStats 	lifetime 	-1
+attr unit  s
+scalar MisBoyas.node[0].batteryStats 	"Mean power consumption" 	62.037930242221
+attr unit  mW
+scalar MisBoyas.node[0].batteryStats 	"num devices" 	1
+scalar MisBoyas.node[0].batteryStats 	"physical layer" 	0
+scalar MisBoyas.node[0].batteryStats 	"device total (mWs)" 	3722.2758144
+scalar MisBoyas.node[0].batteryStats 	account 	0
+scalar MisBoyas.node[0].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[0].batteryStats 	"time (s)" 	0
+scalar MisBoyas.node[0].batteryStats 	account 	1
+scalar MisBoyas.node[0].batteryStats 	"energy (mWs)" 	3720.4941312
+scalar MisBoyas.node[0].batteryStats 	"time (s)" 	59.96928
+scalar MisBoyas.node[0].batteryStats 	account 	2
+scalar MisBoyas.node[0].batteryStats 	"energy (mWs)" 	1.5434496
+scalar MisBoyas.node[0].batteryStats 	"time (s)" 	0.02688
+scalar MisBoyas.node[0].batteryStats 	account 	3
+scalar MisBoyas.node[0].batteryStats 	"energy (mWs)" 	0.2382336
+scalar MisBoyas.node[0].batteryStats 	"time (s)" 	0.00384
+scalar MisBoyas.node[0].batteryStats 	account 	4
+scalar MisBoyas.node[0].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[0].batteryStats 	"time (s)" 	0
+scalar MisBoyas.node[1].nic.mac 	nbTxFrames 	30
+scalar MisBoyas.node[1].nic.mac 	nbRxFrames 	51
+scalar MisBoyas.node[1].nic.mac 	nbDroppedFrames 	0
+scalar MisBoyas.node[1].nic.mac 	nbMissedAcks 	0
+scalar MisBoyas.node[1].nic.mac 	nbRecvdAcks 	0
+scalar MisBoyas.node[1].nic.mac 	nbTxAcks 	0
+scalar MisBoyas.node[1].nic.mac 	nbDuplicates 	0
+scalar MisBoyas.node[1].nic.mac 	meanBackoff 	0.0011151515151515
+scalar MisBoyas.node[1].nic.mac 	nbBackoffs 	33
+scalar MisBoyas.node[1].nic.mac 	backoffDurations 	0.0368
+scalar MisBoyas.node[1].nic.phy 	nbFramesWithInterference 	0
+scalar MisBoyas.node[1].nic.phy 	nbFramesWithoutInterference 	51
+scalar MisBoyas.node[1].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar MisBoyas.node[1].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar MisBoyas.node[1].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar MisBoyas.node[1].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar MisBoyas.node[1].netwl 	nbDataPacketsForwarded 	19
+scalar MisBoyas.node[1].netwl 	nbDataPacketsReceived 	19
+scalar MisBoyas.node[1].netwl 	nbDataPacketsSent 	11
+scalar MisBoyas.node[1].netwl 	nbDuplicatedFloodsReceived 	32
+scalar MisBoyas.node[1].netwl 	nbFloodsSent 	11
+scalar MisBoyas.node[1].netwl 	nbPureUnicastSent 	0
+scalar MisBoyas.node[1].netwl 	nbRouteFloodsSent 	0
+scalar MisBoyas.node[1].netwl 	nbRouteFloodsReceived 	0
+scalar MisBoyas.node[1].netwl 	nbUnicastFloodForwarded 	0
+scalar MisBoyas.node[1].netwl 	nbPureUnicastForwarded 	0
+scalar MisBoyas.node[1].netwl 	nbGetRouteFailures 	11
+scalar MisBoyas.node[1].netwl 	nbRoutesRecorded 	0
+scalar MisBoyas.node[1].netwl 	meanNbHops 	0.10526315789474
+scalar MisBoyas.node[1].tranl 	nbAggrPktReceived 	0
+scalar MisBoyas.node[1].tranl 	"nbAggrPktSentDown " 	0
+scalar MisBoyas.node[1].appl 	"activity duration" 	-1
+attr unit  s
+scalar MisBoyas.node[1].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar MisBoyas.node[1].appl 	lastPacketReception 	-2
+attr unit  s
+scalar MisBoyas.node[1].appl 	nbPacketsSent 	0
+scalar MisBoyas.node[1].appl 	nbPacketsReceived 	0
+statistic MisBoyas.node[1].appl 	latency
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+scalar MisBoyas.node[1].batteryStats 	nominal 	1187988120
+attr unit  mW-s
+scalar MisBoyas.node[1].batteryStats 	total 	3722.0052671432
+attr unit  mW-s
+scalar MisBoyas.node[1].batteryStats 	lifetime 	-1
+attr unit  s
+scalar MisBoyas.node[1].batteryStats 	"Mean power consumption" 	62.033421119054
+attr unit  mW
+scalar MisBoyas.node[1].batteryStats 	"num devices" 	1
+scalar MisBoyas.node[1].batteryStats 	"physical layer" 	0
+scalar MisBoyas.node[1].batteryStats 	"device total (mWs)" 	3722.0052672
+scalar MisBoyas.node[1].batteryStats 	account 	0
+scalar MisBoyas.node[1].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[1].batteryStats 	"time (s)" 	0
+scalar MisBoyas.node[1].batteryStats 	account 	1
+scalar MisBoyas.node[1].batteryStats 	"energy (mWs)" 	3716.3846016
+scalar MisBoyas.node[1].batteryStats 	"time (s)" 	59.90304
+scalar MisBoyas.node[1].batteryStats 	account 	2
+scalar MisBoyas.node[1].batteryStats 	"energy (mWs)" 	4.9059648
+scalar MisBoyas.node[1].batteryStats 	"time (s)" 	0.08544
+scalar MisBoyas.node[1].batteryStats 	account 	3
+scalar MisBoyas.node[1].batteryStats 	"energy (mWs)" 	0.7147008
+scalar MisBoyas.node[1].batteryStats 	"time (s)" 	0.01152
+scalar MisBoyas.node[1].batteryStats 	account 	4
+scalar MisBoyas.node[1].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[1].batteryStats 	"time (s)" 	0
+scalar MisBoyas.node[2].nic.mac 	nbTxFrames 	21
+scalar MisBoyas.node[2].nic.mac 	nbRxFrames 	17
+scalar MisBoyas.node[2].nic.mac 	nbDroppedFrames 	0
+scalar MisBoyas.node[2].nic.mac 	nbMissedAcks 	0
+scalar MisBoyas.node[2].nic.mac 	nbRecvdAcks 	0
+scalar MisBoyas.node[2].nic.mac 	nbTxAcks 	0
+scalar MisBoyas.node[2].nic.mac 	nbDuplicates 	0
+scalar MisBoyas.node[2].nic.mac 	meanBackoff 	0.0013056
+scalar MisBoyas.node[2].nic.mac 	nbBackoffs 	25
+scalar MisBoyas.node[2].nic.mac 	backoffDurations 	0.03264
+scalar MisBoyas.node[2].nic.phy 	nbFramesWithInterference 	1
+scalar MisBoyas.node[2].nic.phy 	nbFramesWithoutInterference 	19
+scalar MisBoyas.node[2].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar MisBoyas.node[2].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar MisBoyas.node[2].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar MisBoyas.node[2].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar MisBoyas.node[2].netwl 	nbDataPacketsForwarded 	10
+scalar MisBoyas.node[2].netwl 	nbDataPacketsReceived 	10
+scalar MisBoyas.node[2].netwl 	nbDataPacketsSent 	11
+scalar MisBoyas.node[2].netwl 	nbDuplicatedFloodsReceived 	10
+scalar MisBoyas.node[2].netwl 	nbFloodsSent 	11
+scalar MisBoyas.node[2].netwl 	nbPureUnicastSent 	0
+scalar MisBoyas.node[2].netwl 	nbRouteFloodsSent 	0
+scalar MisBoyas.node[2].netwl 	nbRouteFloodsReceived 	0
+scalar MisBoyas.node[2].netwl 	nbUnicastFloodForwarded 	0
+scalar MisBoyas.node[2].netwl 	nbPureUnicastForwarded 	0
+scalar MisBoyas.node[2].netwl 	nbGetRouteFailures 	11
+scalar MisBoyas.node[2].netwl 	nbRoutesRecorded 	0
+scalar MisBoyas.node[2].netwl 	meanNbHops 	0.3
+scalar MisBoyas.node[2].tranl 	nbAggrPktReceived 	0
+scalar MisBoyas.node[2].tranl 	"nbAggrPktSentDown " 	0
+scalar MisBoyas.node[2].appl 	"activity duration" 	-1
+attr unit  s
+scalar MisBoyas.node[2].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar MisBoyas.node[2].appl 	lastPacketReception 	-2
+attr unit  s
+scalar MisBoyas.node[2].appl 	nbPacketsSent 	0
+scalar MisBoyas.node[2].appl 	nbPacketsReceived 	0
+statistic MisBoyas.node[2].appl 	latency
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+scalar MisBoyas.node[2].batteryStats 	nominal 	1187988120
+attr unit  mW-s
+scalar MisBoyas.node[2].batteryStats 	total 	3722.1236863136
+attr unit  mW-s
+scalar MisBoyas.node[2].batteryStats 	lifetime 	-1
+attr unit  s
+scalar MisBoyas.node[2].batteryStats 	"Mean power consumption" 	62.035394771894
+attr unit  mW
+scalar MisBoyas.node[2].batteryStats 	"num devices" 	1
+scalar MisBoyas.node[2].batteryStats 	"physical layer" 	0
+scalar MisBoyas.node[2].batteryStats 	"device total (mWs)" 	3722.12368704
+scalar MisBoyas.node[2].batteryStats 	account 	0
+scalar MisBoyas.node[2].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[2].batteryStats 	"time (s)" 	0
+scalar MisBoyas.node[2].batteryStats 	account 	1
+scalar MisBoyas.node[2].batteryStats 	"energy (mWs)" 	3718.18922112
+scalar MisBoyas.node[2].batteryStats 	"time (s)" 	59.932128
+scalar MisBoyas.node[2].batteryStats 	account 	2
+scalar MisBoyas.node[2].batteryStats 	"energy (mWs)" 	3.43417536
+scalar MisBoyas.node[2].batteryStats 	"time (s)" 	0.059808
+scalar MisBoyas.node[2].batteryStats 	account 	3
+scalar MisBoyas.node[2].batteryStats 	"energy (mWs)" 	0.50029056
+scalar MisBoyas.node[2].batteryStats 	"time (s)" 	0.008064
+scalar MisBoyas.node[2].batteryStats 	account 	4
+scalar MisBoyas.node[2].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[2].batteryStats 	"time (s)" 	0
+scalar MisBoyas.node[3].nic.mac 	nbTxFrames 	15
+scalar MisBoyas.node[3].nic.mac 	nbRxFrames 	8
+scalar MisBoyas.node[3].nic.mac 	nbDroppedFrames 	0
+scalar MisBoyas.node[3].nic.mac 	nbMissedAcks 	0
+scalar MisBoyas.node[3].nic.mac 	nbRecvdAcks 	0
+scalar MisBoyas.node[3].nic.mac 	nbTxAcks 	0
+scalar MisBoyas.node[3].nic.mac 	nbDuplicates 	0
+scalar MisBoyas.node[3].nic.mac 	meanBackoff 	0.00099764705882353
+scalar MisBoyas.node[3].nic.mac 	nbBackoffs 	17
+scalar MisBoyas.node[3].nic.mac 	backoffDurations 	0.01696
+scalar MisBoyas.node[3].nic.phy 	nbFramesWithInterference 	0
+scalar MisBoyas.node[3].nic.phy 	nbFramesWithoutInterference 	8
+scalar MisBoyas.node[3].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar MisBoyas.node[3].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar MisBoyas.node[3].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar MisBoyas.node[3].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar MisBoyas.node[3].netwl 	nbDataPacketsForwarded 	4
+scalar MisBoyas.node[3].netwl 	nbDataPacketsReceived 	4
+scalar MisBoyas.node[3].netwl 	nbDataPacketsSent 	11
+scalar MisBoyas.node[3].netwl 	nbDuplicatedFloodsReceived 	4
+scalar MisBoyas.node[3].netwl 	nbFloodsSent 	11
+scalar MisBoyas.node[3].netwl 	nbPureUnicastSent 	0
+scalar MisBoyas.node[3].netwl 	nbRouteFloodsSent 	0
+scalar MisBoyas.node[3].netwl 	nbRouteFloodsReceived 	0
+scalar MisBoyas.node[3].netwl 	nbUnicastFloodForwarded 	0
+scalar MisBoyas.node[3].netwl 	nbPureUnicastForwarded 	0
+scalar MisBoyas.node[3].netwl 	nbGetRouteFailures 	11
+scalar MisBoyas.node[3].netwl 	nbRoutesRecorded 	0
+scalar MisBoyas.node[3].netwl 	meanNbHops 	0
+scalar MisBoyas.node[3].tranl 	nbAggrPktReceived 	0
+scalar MisBoyas.node[3].tranl 	"nbAggrPktSentDown " 	0
+scalar MisBoyas.node[3].appl 	"activity duration" 	-1
+attr unit  s
+scalar MisBoyas.node[3].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar MisBoyas.node[3].appl 	lastPacketReception 	-2
+attr unit  s
+scalar MisBoyas.node[3].appl 	nbPacketsSent 	0
+scalar MisBoyas.node[3].appl 	nbPacketsReceived 	0
+statistic MisBoyas.node[3].appl 	latency
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+scalar MisBoyas.node[3].batteryStats 	nominal 	1187988120
+attr unit  mW-s
+scalar MisBoyas.node[3].batteryStats 	total 	3722.2026331425
+attr unit  mW-s
+scalar MisBoyas.node[3].batteryStats 	lifetime 	-1
+attr unit  s
+scalar MisBoyas.node[3].batteryStats 	"Mean power consumption" 	62.036710552375
+attr unit  mW
+scalar MisBoyas.node[3].batteryStats 	"num devices" 	1
+scalar MisBoyas.node[3].batteryStats 	"physical layer" 	0
+scalar MisBoyas.node[3].batteryStats 	"device total (mWs)" 	3722.2026336
+scalar MisBoyas.node[3].batteryStats 	account 	0
+scalar MisBoyas.node[3].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[3].batteryStats 	"time (s)" 	0
+scalar MisBoyas.node[3].batteryStats 	account 	1
+scalar MisBoyas.node[3].batteryStats 	"energy (mWs)" 	3719.3923008
+scalar MisBoyas.node[3].batteryStats 	"time (s)" 	59.95152
+scalar MisBoyas.node[3].batteryStats 	account 	2
+scalar MisBoyas.node[3].batteryStats 	"energy (mWs)" 	2.4529824
+scalar MisBoyas.node[3].batteryStats 	"time (s)" 	0.04272
+scalar MisBoyas.node[3].batteryStats 	account 	3
+scalar MisBoyas.node[3].batteryStats 	"energy (mWs)" 	0.3573504
+scalar MisBoyas.node[3].batteryStats 	"time (s)" 	0.00576
+scalar MisBoyas.node[3].batteryStats 	account 	4
+scalar MisBoyas.node[3].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[3].batteryStats 	"time (s)" 	0
+scalar MisBoyas.node[4].nic.mac 	nbTxFrames 	30
+scalar MisBoyas.node[4].nic.mac 	nbRxFrames 	38
+scalar MisBoyas.node[4].nic.mac 	nbDroppedFrames 	0
+scalar MisBoyas.node[4].nic.mac 	nbMissedAcks 	0
+scalar MisBoyas.node[4].nic.mac 	nbRecvdAcks 	0
+scalar MisBoyas.node[4].nic.mac 	nbTxAcks 	0
+scalar MisBoyas.node[4].nic.mac 	nbDuplicates 	0
+scalar MisBoyas.node[4].nic.mac 	meanBackoff 	0.0012977777777778
+scalar MisBoyas.node[4].nic.mac 	nbBackoffs 	36
+scalar MisBoyas.node[4].nic.mac 	backoffDurations 	0.04672
+scalar MisBoyas.node[4].nic.phy 	nbFramesWithInterference 	0
+scalar MisBoyas.node[4].nic.phy 	nbFramesWithoutInterference 	40
+scalar MisBoyas.node[4].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar MisBoyas.node[4].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar MisBoyas.node[4].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar MisBoyas.node[4].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar MisBoyas.node[4].netwl 	nbDataPacketsForwarded 	19
+scalar MisBoyas.node[4].netwl 	nbDataPacketsReceived 	19
+scalar MisBoyas.node[4].netwl 	nbDataPacketsSent 	11
+scalar MisBoyas.node[4].netwl 	nbDuplicatedFloodsReceived 	21
+scalar MisBoyas.node[4].netwl 	nbFloodsSent 	11
+scalar MisBoyas.node[4].netwl 	nbPureUnicastSent 	0
+scalar MisBoyas.node[4].netwl 	nbRouteFloodsSent 	0
+scalar MisBoyas.node[4].netwl 	nbRouteFloodsReceived 	0
+scalar MisBoyas.node[4].netwl 	nbUnicastFloodForwarded 	0
+scalar MisBoyas.node[4].netwl 	nbPureUnicastForwarded 	0
+scalar MisBoyas.node[4].netwl 	nbGetRouteFailures 	11
+scalar MisBoyas.node[4].netwl 	nbRoutesRecorded 	0
+scalar MisBoyas.node[4].netwl 	meanNbHops 	0.31578947368421
+scalar MisBoyas.node[4].tranl 	nbAggrPktReceived 	0
+scalar MisBoyas.node[4].tranl 	"nbAggrPktSentDown " 	0
+scalar MisBoyas.node[4].appl 	"activity duration" 	-1
+attr unit  s
+scalar MisBoyas.node[4].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar MisBoyas.node[4].appl 	lastPacketReception 	-2
+attr unit  s
+scalar MisBoyas.node[4].appl 	nbPacketsSent 	0
+scalar MisBoyas.node[4].appl 	nbPacketsReceived 	0
+statistic MisBoyas.node[4].appl 	latency
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+scalar MisBoyas.node[4].batteryStats 	nominal 	1187988120
+attr unit  mW-s
+scalar MisBoyas.node[4].batteryStats 	total 	3722.0052654743
+attr unit  mW-s
+scalar MisBoyas.node[4].batteryStats 	lifetime 	-1
+attr unit  s
+scalar MisBoyas.node[4].batteryStats 	"Mean power consumption" 	62.033421091239
+attr unit  mW
+scalar MisBoyas.node[4].batteryStats 	"num devices" 	1
+scalar MisBoyas.node[4].batteryStats 	"physical layer" 	0
+scalar MisBoyas.node[4].batteryStats 	"device total (mWs)" 	3722.0052672
+scalar MisBoyas.node[4].batteryStats 	account 	0
+scalar MisBoyas.node[4].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[4].batteryStats 	"time (s)" 	0
+scalar MisBoyas.node[4].batteryStats 	account 	1
+scalar MisBoyas.node[4].batteryStats 	"energy (mWs)" 	3716.3846016
+scalar MisBoyas.node[4].batteryStats 	"time (s)" 	59.90304
+scalar MisBoyas.node[4].batteryStats 	account 	2
+scalar MisBoyas.node[4].batteryStats 	"energy (mWs)" 	4.9059648
+scalar MisBoyas.node[4].batteryStats 	"time (s)" 	0.08544
+scalar MisBoyas.node[4].batteryStats 	account 	3
+scalar MisBoyas.node[4].batteryStats 	"energy (mWs)" 	0.7147008
+scalar MisBoyas.node[4].batteryStats 	"time (s)" 	0.01152
+scalar MisBoyas.node[4].batteryStats 	account 	4
+scalar MisBoyas.node[4].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[4].batteryStats 	"time (s)" 	0
+scalar MisBoyas.node[5].nic.mac 	nbTxFrames 	15
+scalar MisBoyas.node[5].nic.mac 	nbRxFrames 	8
+scalar MisBoyas.node[5].nic.mac 	nbDroppedFrames 	0
+scalar MisBoyas.node[5].nic.mac 	nbMissedAcks 	0
+scalar MisBoyas.node[5].nic.mac 	nbRecvdAcks 	0
+scalar MisBoyas.node[5].nic.mac 	nbTxAcks 	0
+scalar MisBoyas.node[5].nic.mac 	nbDuplicates 	0
+scalar MisBoyas.node[5].nic.mac 	meanBackoff 	0.0014305882352941
+scalar MisBoyas.node[5].nic.mac 	nbBackoffs 	17
+scalar MisBoyas.node[5].nic.mac 	backoffDurations 	0.02432
+scalar MisBoyas.node[5].nic.phy 	nbFramesWithInterference 	0
+scalar MisBoyas.node[5].nic.phy 	nbFramesWithoutInterference 	8
+scalar MisBoyas.node[5].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar MisBoyas.node[5].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar MisBoyas.node[5].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar MisBoyas.node[5].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar MisBoyas.node[5].netwl 	nbDataPacketsForwarded 	4
+scalar MisBoyas.node[5].netwl 	nbDataPacketsReceived 	4
+scalar MisBoyas.node[5].netwl 	nbDataPacketsSent 	11
+scalar MisBoyas.node[5].netwl 	nbDuplicatedFloodsReceived 	4
+scalar MisBoyas.node[5].netwl 	nbFloodsSent 	11
+scalar MisBoyas.node[5].netwl 	nbPureUnicastSent 	0
+scalar MisBoyas.node[5].netwl 	nbRouteFloodsSent 	0
+scalar MisBoyas.node[5].netwl 	nbRouteFloodsReceived 	0
+scalar MisBoyas.node[5].netwl 	nbUnicastFloodForwarded 	0
+scalar MisBoyas.node[5].netwl 	nbPureUnicastForwarded 	0
+scalar MisBoyas.node[5].netwl 	nbGetRouteFailures 	11
+scalar MisBoyas.node[5].netwl 	nbRoutesRecorded 	0
+scalar MisBoyas.node[5].netwl 	meanNbHops 	0
+scalar MisBoyas.node[5].tranl 	nbAggrPktReceived 	0
+scalar MisBoyas.node[5].tranl 	"nbAggrPktSentDown " 	0
+scalar MisBoyas.node[5].appl 	"activity duration" 	-1
+attr unit  s
+scalar MisBoyas.node[5].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar MisBoyas.node[5].appl 	lastPacketReception 	-2
+attr unit  s
+scalar MisBoyas.node[5].appl 	nbPacketsSent 	0
+scalar MisBoyas.node[5].appl 	nbPacketsReceived 	0
+statistic MisBoyas.node[5].appl 	latency
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+scalar MisBoyas.node[5].batteryStats 	nominal 	1187988120
+attr unit  mW-s
+scalar MisBoyas.node[5].batteryStats 	total 	3722.2026336193
+attr unit  mW-s
+scalar MisBoyas.node[5].batteryStats 	lifetime 	-1
+attr unit  s
+scalar MisBoyas.node[5].batteryStats 	"Mean power consumption" 	62.036710560322
+attr unit  mW
+scalar MisBoyas.node[5].batteryStats 	"num devices" 	1
+scalar MisBoyas.node[5].batteryStats 	"physical layer" 	0
+scalar MisBoyas.node[5].batteryStats 	"device total (mWs)" 	3722.2026336
+scalar MisBoyas.node[5].batteryStats 	account 	0
+scalar MisBoyas.node[5].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[5].batteryStats 	"time (s)" 	0
+scalar MisBoyas.node[5].batteryStats 	account 	1
+scalar MisBoyas.node[5].batteryStats 	"energy (mWs)" 	3719.3923008
+scalar MisBoyas.node[5].batteryStats 	"time (s)" 	59.95152
+scalar MisBoyas.node[5].batteryStats 	account 	2
+scalar MisBoyas.node[5].batteryStats 	"energy (mWs)" 	2.4529824
+scalar MisBoyas.node[5].batteryStats 	"time (s)" 	0.04272
+scalar MisBoyas.node[5].batteryStats 	account 	3
+scalar MisBoyas.node[5].batteryStats 	"energy (mWs)" 	0.3573504
+scalar MisBoyas.node[5].batteryStats 	"time (s)" 	0.00576
+scalar MisBoyas.node[5].batteryStats 	account 	4
+scalar MisBoyas.node[5].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[5].batteryStats 	"time (s)" 	0
+scalar MisBoyas.node[6].nic.mac 	nbTxFrames 	17
+scalar MisBoyas.node[6].nic.mac 	nbRxFrames 	14
+scalar MisBoyas.node[6].nic.mac 	nbDroppedFrames 	0
+scalar MisBoyas.node[6].nic.mac 	nbMissedAcks 	0
+scalar MisBoyas.node[6].nic.mac 	nbRecvdAcks 	0
+scalar MisBoyas.node[6].nic.mac 	nbTxAcks 	0
+scalar MisBoyas.node[6].nic.mac 	nbDuplicates 	0
+scalar MisBoyas.node[6].nic.mac 	meanBackoff 	0.000992
+scalar MisBoyas.node[6].nic.mac 	nbBackoffs 	20
+scalar MisBoyas.node[6].nic.mac 	backoffDurations 	0.01984
+scalar MisBoyas.node[6].nic.phy 	nbFramesWithInterference 	0
+scalar MisBoyas.node[6].nic.phy 	nbFramesWithoutInterference 	16
+scalar MisBoyas.node[6].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar MisBoyas.node[6].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar MisBoyas.node[6].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar MisBoyas.node[6].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar MisBoyas.node[6].netwl 	nbDataPacketsForwarded 	6
+scalar MisBoyas.node[6].netwl 	nbDataPacketsReceived 	6
+scalar MisBoyas.node[6].netwl 	nbDataPacketsSent 	11
+scalar MisBoyas.node[6].netwl 	nbDuplicatedFloodsReceived 	9
+scalar MisBoyas.node[6].netwl 	nbFloodsSent 	11
+scalar MisBoyas.node[6].netwl 	nbPureUnicastSent 	0
+scalar MisBoyas.node[6].netwl 	nbRouteFloodsSent 	0
+scalar MisBoyas.node[6].netwl 	nbRouteFloodsReceived 	0
+scalar MisBoyas.node[6].netwl 	nbUnicastFloodForwarded 	0
+scalar MisBoyas.node[6].netwl 	nbPureUnicastForwarded 	0
+scalar MisBoyas.node[6].netwl 	nbGetRouteFailures 	11
+scalar MisBoyas.node[6].netwl 	nbRoutesRecorded 	0
+scalar MisBoyas.node[6].netwl 	meanNbHops 	0.83333333333333
+scalar MisBoyas.node[6].tranl 	nbAggrPktReceived 	0
+scalar MisBoyas.node[6].tranl 	"nbAggrPktSentDown " 	0
+scalar MisBoyas.node[6].appl 	"activity duration" 	-1
+attr unit  s
+scalar MisBoyas.node[6].appl 	firstPacketGeneration 	-1
+attr unit  s
+scalar MisBoyas.node[6].appl 	lastPacketReception 	-2
+attr unit  s
+scalar MisBoyas.node[6].appl 	nbPacketsSent 	0
+scalar MisBoyas.node[6].appl 	nbPacketsReceived 	0
+statistic MisBoyas.node[6].appl 	latency
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+scalar MisBoyas.node[6].batteryStats 	nominal 	1187988120
+attr unit  mW-s
+scalar MisBoyas.node[6].batteryStats 	total 	3722.176317215
+attr unit  mW-s
+scalar MisBoyas.node[6].batteryStats 	lifetime 	-1
+attr unit  s
+scalar MisBoyas.node[6].batteryStats 	"Mean power consumption" 	62.036271953583
+attr unit  mW
+scalar MisBoyas.node[6].batteryStats 	"num devices" 	1
+scalar MisBoyas.node[6].batteryStats 	"physical layer" 	0
+scalar MisBoyas.node[6].batteryStats 	"device total (mWs)" 	3722.17631808
+scalar MisBoyas.node[6].batteryStats 	account 	0
+scalar MisBoyas.node[6].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[6].batteryStats 	"time (s)" 	0
+scalar MisBoyas.node[6].batteryStats 	account 	1
+scalar MisBoyas.node[6].batteryStats 	"energy (mWs)" 	3718.99127424
+scalar MisBoyas.node[6].batteryStats 	"time (s)" 	59.945056
+scalar MisBoyas.node[6].batteryStats 	account 	2
+scalar MisBoyas.node[6].batteryStats 	"energy (mWs)" 	2.78004672
+scalar MisBoyas.node[6].batteryStats 	"time (s)" 	0.048416
+scalar MisBoyas.node[6].batteryStats 	account 	3
+scalar MisBoyas.node[6].batteryStats 	"energy (mWs)" 	0.40499712
+scalar MisBoyas.node[6].batteryStats 	"time (s)" 	0.006528
+scalar MisBoyas.node[6].batteryStats 	account 	4
+scalar MisBoyas.node[6].batteryStats 	"energy (mWs)" 	0
+scalar MisBoyas.node[6].batteryStats 	"time (s)" 	0

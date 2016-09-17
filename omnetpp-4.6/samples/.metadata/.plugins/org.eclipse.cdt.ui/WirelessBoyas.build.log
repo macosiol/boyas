@@ -1,0 +1,5 @@
+17:15:21 **** Incremental Build of configuration gcc-debug for project WirelessBoyas ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+
+17:15:21 Build Finished (took 68ms)
+

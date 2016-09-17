@@ -1,0 +1,70 @@
+file 2416 1471653877                                            
+version 2
+run General-0-20160819-17:42:17-5028
+attr configname General
+attr datetime 20160819-17:42:17
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Tictoc13
+attr processid 5028
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 67  Tictoc13.IEEE802154Nodes[0].NIC.radioInterface  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 68  Tictoc13.IEEE802154Nodes[0].NIC.radioInterface  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 69  Tictoc13.IEEE802154Nodes[0].NIC.radioInterface  channelNumber:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel number, vector"
+vector 74  Tictoc13.IEEE802154Nodes[1].NIC.radioInterface  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 75  Tictoc13.IEEE802154Nodes[1].NIC.radioInterface  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 76  Tictoc13.IEEE802154Nodes[1].NIC.radioInterface  channelNumber:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel number, vector"
+vector 81  Tictoc13.IEEE802154Nodes[2].NIC.radioInterface  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 82  Tictoc13.IEEE802154Nodes[2].NIC.radioInterface  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 83  Tictoc13.IEEE802154Nodes[2].NIC.radioInterface  channelNumber:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel number, vector"
+vector 88  Tictoc13.IEEE802154Nodes[3].NIC.radioInterface  bitrate:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, vector"
+attr unit  bps
+vector 89  Tictoc13.IEEE802154Nodes[3].NIC.radioInterface  radioState:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), vector"
+vector 90  Tictoc13.IEEE802154Nodes[3].NIC.radioInterface  channelNumber:vector  ETV
+attr interpolationmode  sample-hold
+attr title  "channel number, vector"
+67	2284 14 0 0 0 0 1 250000 250000 250000 62500000000
+68	2298 9 0 0 0 0 1 0 0 0 0
+69	2307 10 0 0 0 0 1 25 25 25 625
+74	2317 14 0 0 0 0 1 250000 250000 250000 62500000000
+75	2331 9 0 0 0 0 1 0 0 0 0
+76	2340 10 0 0 0 0 1 25 25 25 625
+81	2350 14 0 0 0 0 1 250000 250000 250000 62500000000
+82	2364 9 0 0 0 0 1 0 0 0 0
+83	2373 10 0 0 0 0 1 25 25 25 625
+88	2383 14 0 0 0 0 1 250000 250000 250000 62500000000
+89	2397 9 0 0 0 0 1 0 0 0 0
+90	2406 10 0 0 0 0 1 25 25 25 625

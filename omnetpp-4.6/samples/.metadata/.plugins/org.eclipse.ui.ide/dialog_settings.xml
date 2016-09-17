@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/telemedicina/omnetpp-4.6/samples/veins-veins-4.4"/>
+			<item value="/home/telemedicina/omnetpp-4.6/samples/MisBoyas"/>
+			<item value="/home/telemedicina/omnetpp-4.6/samples/MiXiM"/>
+			<item value="/home/telemedicina/omnet46/omnetpp-4.6/samples"/>
+			<item value="/home/telemedicina/omnet46/omnetpp-4.6"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

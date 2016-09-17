@@ -1,0 +1,409 @@
+version 2
+run General-0-20160819-17:42:17-5028
+attr configname General
+attr datetime 20160819-17:42:17
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Tictoc13
+attr processid 5028
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar Tictoc13.IEEE802154Nodes[0].application 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Tictoc13.IEEE802154Nodes[0].application 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic Tictoc13.IEEE802154Nodes[0].application 	endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar Tictoc13.IEEE802154Nodes[0].application 	sentPk:count 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Tictoc13.IEEE802154Nodes[0].application 	sentPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+statistic Tictoc13.IEEE802154Nodes[0].NIC.radioInterface 	channelNumber:histogram
+field count 1
+field mean 25
+field stddev -nan
+field sum 25
+field sqrsum 625
+field min 25
+field max 25
+attr interpolationmode  sample-hold
+attr title  "channel number, histogram"
+bin	-INF	0
+bin	24	0
+bin	25	1
+bin	26	0
+scalar Tictoc13.IEEE802154Nodes[0].NIC.radioInterface 	lossRate:min 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, min"
+scalar Tictoc13.IEEE802154Nodes[0].NIC.radioInterface 	lossRate:max 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, max"
+scalar Tictoc13.IEEE802154Nodes[0].NIC.radioInterface 	lossRate:timeavg 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, timeavg"
+scalar Tictoc13.IEEE802154Nodes[0].NIC.radioInterface 	bitrate:min 	250000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, min"
+attr unit  bps
+scalar Tictoc13.IEEE802154Nodes[0].NIC.radioInterface 	bitrate:max 	250000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, max"
+attr unit  bps
+scalar Tictoc13.IEEE802154Nodes[0].NIC.radioInterface 	bitrate:timeavg 	-nan
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, timeavg"
+attr unit  bps
+scalar Tictoc13.IEEE802154Nodes[0].NIC.radioInterface 	radioState:count 	1
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), count"
+scalar Tictoc13.IEEE802154Nodes[1].application 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Tictoc13.IEEE802154Nodes[1].application 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic Tictoc13.IEEE802154Nodes[1].application 	endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar Tictoc13.IEEE802154Nodes[1].application 	sentPk:count 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Tictoc13.IEEE802154Nodes[1].application 	sentPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+statistic Tictoc13.IEEE802154Nodes[1].NIC.radioInterface 	channelNumber:histogram
+field count 1
+field mean 25
+field stddev -nan
+field sum 25
+field sqrsum 625
+field min 25
+field max 25
+attr interpolationmode  sample-hold
+attr title  "channel number, histogram"
+bin	-INF	0
+bin	24	0
+bin	25	1
+bin	26	0
+scalar Tictoc13.IEEE802154Nodes[1].NIC.radioInterface 	lossRate:min 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, min"
+scalar Tictoc13.IEEE802154Nodes[1].NIC.radioInterface 	lossRate:max 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, max"
+scalar Tictoc13.IEEE802154Nodes[1].NIC.radioInterface 	lossRate:timeavg 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, timeavg"
+scalar Tictoc13.IEEE802154Nodes[1].NIC.radioInterface 	bitrate:min 	250000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, min"
+attr unit  bps
+scalar Tictoc13.IEEE802154Nodes[1].NIC.radioInterface 	bitrate:max 	250000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, max"
+attr unit  bps
+scalar Tictoc13.IEEE802154Nodes[1].NIC.radioInterface 	bitrate:timeavg 	-nan
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, timeavg"
+attr unit  bps
+scalar Tictoc13.IEEE802154Nodes[1].NIC.radioInterface 	radioState:count 	1
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), count"
+scalar Tictoc13.IEEE802154Nodes[2].application 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Tictoc13.IEEE802154Nodes[2].application 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic Tictoc13.IEEE802154Nodes[2].application 	endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar Tictoc13.IEEE802154Nodes[2].application 	sentPk:count 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Tictoc13.IEEE802154Nodes[2].application 	sentPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+statistic Tictoc13.IEEE802154Nodes[2].NIC.radioInterface 	channelNumber:histogram
+field count 1
+field mean 25
+field stddev -nan
+field sum 25
+field sqrsum 625
+field min 25
+field max 25
+attr interpolationmode  sample-hold
+attr title  "channel number, histogram"
+bin	-INF	0
+bin	24	0
+bin	25	1
+bin	26	0
+scalar Tictoc13.IEEE802154Nodes[2].NIC.radioInterface 	lossRate:min 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, min"
+scalar Tictoc13.IEEE802154Nodes[2].NIC.radioInterface 	lossRate:max 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, max"
+scalar Tictoc13.IEEE802154Nodes[2].NIC.radioInterface 	lossRate:timeavg 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, timeavg"
+scalar Tictoc13.IEEE802154Nodes[2].NIC.radioInterface 	bitrate:min 	250000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, min"
+attr unit  bps
+scalar Tictoc13.IEEE802154Nodes[2].NIC.radioInterface 	bitrate:max 	250000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, max"
+attr unit  bps
+scalar Tictoc13.IEEE802154Nodes[2].NIC.radioInterface 	bitrate:timeavg 	-nan
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, timeavg"
+attr unit  bps
+scalar Tictoc13.IEEE802154Nodes[2].NIC.radioInterface 	radioState:count 	1
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), count"
+scalar Tictoc13.IEEE802154Nodes[3].application 	rcvdPk:count 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, count"
+scalar Tictoc13.IEEE802154Nodes[3].application 	rcvdPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  rcvdPk
+attr title  "packets received, sum(packetBytes)"
+statistic Tictoc13.IEEE802154Nodes[3].application 	endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field sum 0
+field sqrsum 0
+field min -nan
+field max -nan
+attr interpolationmode  none
+attr source  messageAge(rcvdPk)
+attr title  "end-to-end delay, histogram"
+attr unit  s
+bin	-INF	0
+bin	-0.5	0
+bin	-0.46666666666667	0
+bin	-0.43333333333333	0
+bin	-0.4	0
+bin	-0.36666666666667	0
+bin	-0.33333333333333	0
+bin	-0.3	0
+bin	-0.26666666666667	0
+bin	-0.23333333333333	0
+bin	-0.2	0
+bin	-0.16666666666667	0
+bin	-0.13333333333333	0
+bin	-0.1	0
+bin	-0.066666666666667	0
+bin	-0.033333333333333	0
+bin	0	0
+bin	0.033333333333333	0
+bin	0.066666666666667	0
+bin	0.1	0
+bin	0.13333333333333	0
+bin	0.16666666666667	0
+bin	0.2	0
+bin	0.23333333333333	0
+bin	0.26666666666667	0
+bin	0.3	0
+bin	0.33333333333333	0
+bin	0.36666666666667	0
+bin	0.4	0
+bin	0.43333333333333	0
+bin	0.46666666666667	0
+bin	0.5	0
+scalar Tictoc13.IEEE802154Nodes[3].application 	sentPk:count 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, count"
+scalar Tictoc13.IEEE802154Nodes[3].application 	sentPk:sum(packetBytes) 	0
+attr interpolationmode  none
+attr source  sentPk
+attr title  "packets sent, sum(packetBytes)"
+statistic Tictoc13.IEEE802154Nodes[3].NIC.radioInterface 	channelNumber:histogram
+field count 1
+field mean 25
+field stddev -nan
+field sum 25
+field sqrsum 625
+field min 25
+field max 25
+attr interpolationmode  sample-hold
+attr title  "channel number, histogram"
+bin	-INF	0
+bin	24	0
+bin	25	1
+bin	26	0
+scalar Tictoc13.IEEE802154Nodes[3].NIC.radioInterface 	lossRate:min 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, min"
+scalar Tictoc13.IEEE802154Nodes[3].NIC.radioInterface 	lossRate:max 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, max"
+scalar Tictoc13.IEEE802154Nodes[3].NIC.radioInterface 	lossRate:timeavg 	-nan
+attr interpolationmode  backward-sample-hold
+attr title  "packet loss rate, timeavg"
+scalar Tictoc13.IEEE802154Nodes[3].NIC.radioInterface 	bitrate:min 	250000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, min"
+attr unit  bps
+scalar Tictoc13.IEEE802154Nodes[3].NIC.radioInterface 	bitrate:max 	250000
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, max"
+attr unit  bps
+scalar Tictoc13.IEEE802154Nodes[3].NIC.radioInterface 	bitrate:timeavg 	-nan
+attr interpolationmode  sample-hold
+attr title  "tx bitrate, timeavg"
+attr unit  bps
+scalar Tictoc13.IEEE802154Nodes[3].NIC.radioInterface 	radioState:count 	1
+attr interpolationmode  sample-hold
+attr title  "radio state (enum), count"

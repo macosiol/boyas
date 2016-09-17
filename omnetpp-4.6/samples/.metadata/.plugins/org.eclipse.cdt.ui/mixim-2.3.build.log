@@ -1,0 +1,11 @@
+17:33:00 **** Incremental Build of configuration gcc-debug for project mixim-2.3 ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+cd src && make
+make[1]: Entering directory '/home/telemedicina/omnetpp-4.6/samples/mixim-2.3/src'
+make[1]: Leaving directory '/home/telemedicina/omnetpp-4.6/samples/mixim-2.3/src'
+cd examples && make
+make[1]: Entering directory '/home/telemedicina/omnetpp-4.6/samples/mixim-2.3/examples'
+make[1]: Leaving directory '/home/telemedicina/omnetpp-4.6/samples/mixim-2.3/examples'
+
+17:33:00 Build Finished (took 64ms)
+

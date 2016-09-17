@@ -1,0 +1,147 @@
+version 2
+run General-0-20160808-10:49:32-4441
+attr configname General
+attr datetime 20160808-10:49:32
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network Wsnproof
+attr processid 4441
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+scalar Wsnproof.node[0].nic.mac 	nbTxFrames 	12
+scalar Wsnproof.node[0].nic.mac 	nbRxFrames 	15
+scalar Wsnproof.node[0].nic.mac 	nbDroppedFrames 	0
+scalar Wsnproof.node[0].nic.mac 	nbMissedAcks 	0
+scalar Wsnproof.node[0].nic.mac 	nbRecvdAcks 	9
+scalar Wsnproof.node[0].nic.mac 	nbTxAcks 	9
+scalar Wsnproof.node[0].nic.mac 	nbDuplicates 	0
+scalar Wsnproof.node[0].nic.mac 	meanBackoff 	0.0024290909090909
+scalar Wsnproof.node[0].nic.mac 	nbBackoffs 	22
+scalar Wsnproof.node[0].nic.mac 	backoffDurations 	0.05344
+scalar Wsnproof.node[0].nic.phy 	nbFramesWithInterference 	1
+scalar Wsnproof.node[0].nic.phy 	nbFramesWithoutInterference 	62
+scalar Wsnproof.node[0].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Wsnproof.node[0].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Wsnproof.node[0].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Wsnproof.node[0].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Wsnproof.node[0].tranl 	nbAggrPktReceived 	0
+scalar Wsnproof.node[0].tranl 	"nbAggrPktSentDown " 	0
+scalar Wsnproof.node[0].batteryStats 	nominal 	1187988120
+attr unit  mW-s
+scalar Wsnproof.node[0].batteryStats 	total 	1426.7581136227
+attr unit  mW-s
+scalar Wsnproof.node[0].batteryStats 	lifetime 	-1
+attr unit  s
+scalar Wsnproof.node[0].batteryStats 	"Mean power consumption" 	62.032961461855
+attr unit  mW
+scalar Wsnproof.node[1].nic.mac 	nbTxFrames 	12
+scalar Wsnproof.node[1].nic.mac 	nbRxFrames 	15
+scalar Wsnproof.node[1].nic.mac 	nbDroppedFrames 	0
+scalar Wsnproof.node[1].nic.mac 	nbMissedAcks 	0
+scalar Wsnproof.node[1].nic.mac 	nbRecvdAcks 	9
+scalar Wsnproof.node[1].nic.mac 	nbTxAcks 	9
+scalar Wsnproof.node[1].nic.mac 	nbDuplicates 	0
+scalar Wsnproof.node[1].nic.mac 	meanBackoff 	0.00116
+scalar Wsnproof.node[1].nic.mac 	nbBackoffs 	16
+scalar Wsnproof.node[1].nic.mac 	backoffDurations 	0.01856
+scalar Wsnproof.node[1].nic.phy 	nbFramesWithInterference 	1
+scalar Wsnproof.node[1].nic.phy 	nbFramesWithoutInterference 	62
+scalar Wsnproof.node[1].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Wsnproof.node[1].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Wsnproof.node[1].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Wsnproof.node[1].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Wsnproof.node[1].tranl 	nbAggrPktReceived 	0
+scalar Wsnproof.node[1].tranl 	"nbAggrPktSentDown " 	0
+scalar Wsnproof.node[1].batteryStats 	nominal 	1187988120
+attr unit  mW-s
+scalar Wsnproof.node[1].batteryStats 	total 	1426.7581136227
+attr unit  mW-s
+scalar Wsnproof.node[1].batteryStats 	lifetime 	-1
+attr unit  s
+scalar Wsnproof.node[1].batteryStats 	"Mean power consumption" 	62.032961461855
+attr unit  mW
+scalar Wsnproof.node[2].nic.mac 	nbTxFrames 	13
+scalar Wsnproof.node[2].nic.mac 	nbRxFrames 	10
+scalar Wsnproof.node[2].nic.mac 	nbDroppedFrames 	0
+scalar Wsnproof.node[2].nic.mac 	nbMissedAcks 	1
+scalar Wsnproof.node[2].nic.mac 	nbRecvdAcks 	9
+scalar Wsnproof.node[2].nic.mac 	nbTxAcks 	9
+scalar Wsnproof.node[2].nic.mac 	nbDuplicates 	0
+scalar Wsnproof.node[2].nic.mac 	meanBackoff 	0.0024043243243243
+scalar Wsnproof.node[2].nic.mac 	nbBackoffs 	37
+scalar Wsnproof.node[2].nic.mac 	backoffDurations 	0.08896
+scalar Wsnproof.node[2].nic.phy 	nbFramesWithInterference 	1
+scalar Wsnproof.node[2].nic.phy 	nbFramesWithoutInterference 	61
+scalar Wsnproof.node[2].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Wsnproof.node[2].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Wsnproof.node[2].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Wsnproof.node[2].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Wsnproof.node[2].tranl 	nbAggrPktReceived 	0
+scalar Wsnproof.node[2].tranl 	"nbAggrPktSentDown " 	0
+scalar Wsnproof.node[2].batteryStats 	nominal 	1187988120
+attr unit  mW-s
+scalar Wsnproof.node[2].batteryStats 	total 	1426.7458441257
+attr unit  mW-s
+scalar Wsnproof.node[2].batteryStats 	lifetime 	-1
+attr unit  s
+scalar Wsnproof.node[2].batteryStats 	"Mean power consumption" 	62.032428005467
+attr unit  mW
+scalar Wsnproof.node[3].nic.mac 	nbTxFrames 	13
+scalar Wsnproof.node[3].nic.mac 	nbRxFrames 	8
+scalar Wsnproof.node[3].nic.mac 	nbDroppedFrames 	0
+scalar Wsnproof.node[3].nic.mac 	nbMissedAcks 	1
+scalar Wsnproof.node[3].nic.mac 	nbRecvdAcks 	9
+scalar Wsnproof.node[3].nic.mac 	nbTxAcks 	9
+scalar Wsnproof.node[3].nic.mac 	nbDuplicates 	0
+scalar Wsnproof.node[3].nic.mac 	meanBackoff 	0.003104
+scalar Wsnproof.node[3].nic.mac 	nbBackoffs 	30
+scalar Wsnproof.node[3].nic.mac 	backoffDurations 	0.09312
+scalar Wsnproof.node[3].nic.phy 	nbFramesWithInterference 	1
+scalar Wsnproof.node[3].nic.phy 	nbFramesWithoutInterference 	61
+scalar Wsnproof.node[3].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Wsnproof.node[3].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Wsnproof.node[3].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Wsnproof.node[3].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Wsnproof.node[3].tranl 	nbAggrPktReceived 	0
+scalar Wsnproof.node[3].tranl 	"nbAggrPktSentDown " 	0
+scalar Wsnproof.node[3].batteryStats 	nominal 	1187988120
+attr unit  mW-s
+scalar Wsnproof.node[3].batteryStats 	total 	1426.7458431721
+attr unit  mW-s
+scalar Wsnproof.node[3].batteryStats 	lifetime 	-1
+attr unit  s
+scalar Wsnproof.node[3].batteryStats 	"Mean power consumption" 	62.032427964003
+attr unit  mW
+scalar Wsnproof.node[4].nic.mac 	nbTxFrames 	3
+scalar Wsnproof.node[4].nic.mac 	nbRxFrames 	0
+scalar Wsnproof.node[4].nic.mac 	nbDroppedFrames 	0
+scalar Wsnproof.node[4].nic.mac 	nbMissedAcks 	0
+scalar Wsnproof.node[4].nic.mac 	nbRecvdAcks 	0
+scalar Wsnproof.node[4].nic.mac 	nbTxAcks 	0
+scalar Wsnproof.node[4].nic.mac 	nbDuplicates 	0
+scalar Wsnproof.node[4].nic.mac 	meanBackoff 	0.00010666666666667
+scalar Wsnproof.node[4].nic.mac 	nbBackoffs 	3
+scalar Wsnproof.node[4].nic.mac 	backoffDurations 	0.00032
+scalar Wsnproof.node[4].nic.phy 	nbFramesWithInterference 	0
+scalar Wsnproof.node[4].nic.phy 	nbFramesWithoutInterference 	3
+scalar Wsnproof.node[4].nic.phy 	nbFramesWithInterferencePartial 	0
+scalar Wsnproof.node[4].nic.phy 	nbFramesWithoutInterferencePartial 	0
+scalar Wsnproof.node[4].nic.phy 	nbFramesWithInterferenceDropped 	0
+scalar Wsnproof.node[4].nic.phy 	nbFramesWithoutInterferenceDropped 	0
+scalar Wsnproof.node[4].tranl 	nbAggrPktReceived 	0
+scalar Wsnproof.node[4].tranl 	"nbAggrPktSentDown " 	0
+scalar Wsnproof.node[4].batteryStats 	nominal 	1187988120
+attr unit  mW-s
+scalar Wsnproof.node[4].batteryStats 	total 	1426.883187294
+attr unit  mW-s
+scalar Wsnproof.node[4].batteryStats 	lifetime 	-1
+attr unit  s
+scalar Wsnproof.node[4].batteryStats 	"Mean power consumption" 	62.038399447565
+attr unit  mW

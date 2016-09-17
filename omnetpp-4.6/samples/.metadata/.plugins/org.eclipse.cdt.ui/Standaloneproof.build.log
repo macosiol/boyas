@@ -1,0 +1,10 @@
+16:06:34 **** Incremental Build of configuration gcc-release for project Standaloneproof ****
+make MODE=release CONFIGNAME=gcc-release all 
+Creating executable: out/gcc-release//Standaloneproof
+/usr/bin/ld: cannot find -linet
+Makefile:89: recipe for target 'out/gcc-release//Standaloneproof' failed
+collect2: error: ld returned 1 exit status
+make: *** [out/gcc-release//Standaloneproof] Error 1
+
+16:06:34 Build Finished (took 64ms)
+

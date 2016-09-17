@@ -1,0 +1,216 @@
+15:47:13 **** Build of configuration gcc-debug for project pruebaNP ****
+make MODE=debug CONFIGNAME=gcc-debug all 
+pruebanp.cc
+In file included from /home/telemedicina/omnetpp-4.6/include/simtime_t.h:24:0,
+                 from /home/telemedicina/omnetpp-4.6/include/cexception.h:26,
+                 from /home/telemedicina/omnetpp-4.6/include/cnamedobject.h:26,
+                 from /home/telemedicina/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnetpp-4.6/include/omnetpp.h:21,
+                 from pruebanp.cc:12:
+/home/telemedicina/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_S’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnetpp-4.6/include/simtime.h:107:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_S;
+                                     ^
+/home/telemedicina/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_MS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnetpp-4.6/include/simtime.h:108:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_MS;
+                                     ^
+/home/telemedicina/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_US’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnetpp-4.6/include/simtime.h:109:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_US;
+                                     ^
+/home/telemedicina/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_NS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnetpp-4.6/include/simtime.h:110:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_NS;
+                                     ^
+/home/telemedicina/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_PS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnetpp-4.6/include/simtime.h:111:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_PS;
+                                     ^
+/home/telemedicina/omnetpp-4.6/include/simtime.h:60:15: warning: ‘SimTime::SCALEEXP_FS’ is deprecated [-Wdeprecated-declarations]
+ class SIM_API SimTime
+               ^
+/home/telemedicina/omnetpp-4.6/include/simtime.h:112:37: note: declared here
+     _OPPDEPRECATED static const int SCALEEXP_FS;
+                                     ^
+In file included from /home/telemedicina/omnetpp-4.6/include/omnetpp.h:50:0,
+                 from pruebanp.cc:12:
+/home/telemedicina/omnetpp-4.6/include/clinkedlist.h:82:56: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         Iterator(const cLinkedList& q, bool athead=true)
+                                                        ^
+/home/telemedicina/omnetpp-4.6/include/clinkedlist.h:88:57: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+         void init(const cLinkedList& q, bool athead=true)
+                                                         ^
+/home/telemedicina/omnetpp-4.6/include/clinkedlist.h:127:39: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     void copy(const cLinkedList& other);
+                                       ^
+/home/telemedicina/omnetpp-4.6/include/clinkedlist.h:154:41: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList(const cLinkedList& llist);
+                                         ^
+/home/telemedicina/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnetpp-4.6/include/clinkedlist.h:173:52: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     cLinkedList& operator=(const cLinkedList& queue);
+                                                    ^
+/home/telemedicina/omnetpp-4.6/include/clinkedlist.h:184:32: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                ^
+/home/telemedicina/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+/home/telemedicina/omnetpp-4.6/include/clinkedlist.h: In member function ‘virtual cLinkedList* cLinkedList::dup() const’:
+/home/telemedicina/omnetpp-4.6/include/clinkedlist.h:184:51: warning: ‘cLinkedList’ is deprecated [-Wdeprecated-declarations]
+     virtual cLinkedList *dup() const  {return new cLinkedList(*this);}
+                                                   ^
+/home/telemedicina/omnetpp-4.6/include/clinkedlist.h:54:38: note: declared here
+ class SIM_API CLINKEDLIST_DEPRECATED cLinkedList : public cOwnedObject
+                                      ^
+pruebanp.cc: At global scope:
+pruebanp.cc:21:1: error: expected class-name before ‘{’ token
+ {
+ ^
+pruebanp.cc:23:13: error: ‘MPDU_m’ does not name a type
+     virtual MPDU_m *generateMessage();
+             ^
+pruebanp.cc:24:33: error: ‘MPDU_m’ has not been declared
+     virtual void forwardMessage(MPDU_m *msg);
+                                 ^
+pruebanp.cc:25:18: error: ‘virtual void Txc13::initialize()’ marked ‘override’, but does not override
+     virtual void initialize() override;
+                  ^
+pruebanp.cc:26:18: error: ‘virtual void Txc13::handleMessage(cMessage*)’ marked ‘override’, but does not override
+     virtual void handleMessage(cMessage *msg) override;
+                  ^
+In file included from /home/telemedicina/omnetpp-4.6/include/cobject.h:29:0,
+                 from /home/telemedicina/omnetpp-4.6/include/cnamedobject.h:25,
+                 from /home/telemedicina/omnetpp-4.6/include/cownedobject.h:25,
+                 from /home/telemedicina/omnetpp-4.6/include/carray.h:23,
+                 from /home/telemedicina/omnetpp-4.6/include/omnetpp.h:21,
+                 from pruebanp.cc:12:
+pruebanp.cc: In function ‘cObject* __factoryfunc_28()’:
+pruebanp.cc:28:15: error: cannot convert ‘Txc13*’ to ‘cModule*’ in initialization
+ Define_Module(Txc13);
+               ^
+/home/telemedicina/omnetpp-4.6/include/regmacros.h:178:83: note: in definition of macro ‘__REGISTER_CLASS’
+   static cObject *MAKE_UNIQUE_WITHIN_FILE(__factoryfunc_)() {BASECLASS *ret = new CLASSNAME; return ret; } \
+                                                                                   ^
+pruebanp.cc:28:1: note: in expansion of macro ‘Define_Module’
+ Define_Module(Txc13);
+ ^
+pruebanp.cc: In member function ‘virtual void Txc13::initialize()’:
+pruebanp.cc:32:18: error: ‘getIndex’ was not declared in this scope
+     if (getIndex() == 0) {
+                  ^
+pruebanp.cc:34:9: error: ‘MPDU_m’ was not declared in this scope
+         MPDU_m *msg = generateMessage();
+         ^
+pruebanp.cc:34:17: error: ‘msg’ was not declared in this scope
+         MPDU_m *msg = generateMessage();
+                 ^
+pruebanp.cc:34:39: error: ‘generateMessage’ was not declared in this scope
+         MPDU_m *msg = generateMessage();
+                                       ^
+pruebanp.cc:35:28: error: ‘scheduleAt’ was not declared in this scope
+         scheduleAt(0.0, msg);
+                            ^
+pruebanp.cc: In member function ‘virtual void Txc13::handleMessage(cMessage*)’:
+pruebanp.cc:40:5: error: ‘MPDU_m’ was not declared in this scope
+     MPDU_m *ttmsg = check_and_cast<MPDU_m *>(msg);
+     ^
+pruebanp.cc:40:13: error: ‘ttmsg’ was not declared in this scope
+     MPDU_m *ttmsg = check_and_cast<MPDU_m *>(msg);
+             ^
+pruebanp.cc:40:21: error: parse error in template argument list
+     MPDU_m *ttmsg = check_and_cast<MPDU_m *>(msg);
+                     ^
+pruebanp.cc:40:49: error: no matching function for call to ‘check_and_cast(cMessage*&)’
+     MPDU_m *ttmsg = check_and_cast<MPDU_m *>(msg);
+                                                 ^
+In file included from /home/telemedicina/omnetpp-4.6/include/carray.h:23:0,
+                 from /home/telemedicina/omnetpp-4.6/include/omnetpp.h:21,
+                 from pruebanp.cc:12:
+/home/telemedicina/omnetpp-4.6/include/cownedobject.h:325:3: note: candidate: template<class T> T check_and_cast(cObject*)
+ T check_and_cast(cObject *p)
+   ^
+/home/telemedicina/omnetpp-4.6/include/cownedobject.h:325:3: note:   template argument deduction/substitution failed:
+pruebanp.cc:40:49: error: template argument 1 is invalid
+     MPDU_m *ttmsg = check_and_cast<MPDU_m *>(msg);
+                                                 ^
+In file included from /home/telemedicina/omnetpp-4.6/include/carray.h:23:0,
+                 from /home/telemedicina/omnetpp-4.6/include/omnetpp.h:21,
+                 from pruebanp.cc:12:
+/home/telemedicina/omnetpp-4.6/include/cownedobject.h:340:9: note: candidate: template<class T> const T check_and_cast(const cObject*)
+ const T check_and_cast(const cObject *p)
+         ^
+/home/telemedicina/omnetpp-4.6/include/cownedobject.h:340:9: note:   template argument deduction/substitution failed:
+pruebanp.cc:40:49: error: template argument 1 is invalid
+     MPDU_m *ttmsg = check_and_cast<MPDU_m *>(msg);
+                                                 ^
+In file included from ../inet/src/base/INETDefs.h:26:0,
+                 from /home/telemedicina/git/IEEE802154INET-Standalone/src/util/MACAddressExt.h:26,
+                 from /home/telemedicina/git/IEEE802154INET-Standalone/src/util/MPDU_m.h:19,
+                 from pruebanp.cc:19:
+../inet/src/base/Compat.h:95:3: note: candidate: template<class T, class P> T check_and_cast(P*)
+ T check_and_cast(P *p)
+   ^
+../inet/src/base/Compat.h:95:3: note:   template argument deduction/substitution failed:
+pruebanp.cc:40:49: error: template argument 1 is invalid
+     MPDU_m *ttmsg = check_and_cast<MPDU_m *>(msg);
+                                                 ^
+In file included from ../inet/src/base/INETDefs.h:26:0,
+                 from /home/telemedicina/git/IEEE802154INET-Standalone/src/util/MACAddressExt.h:26,
+                 from /home/telemedicina/git/IEEE802154INET-Standalone/src/util/MPDU_m.h:19,
+                 from pruebanp.cc:19:
+../inet/src/base/Compat.h:115:3: note: candidate: template<class T, class P> T check_and_cast(const P*)
+ T check_and_cast(const P *p)
+   ^
+../inet/src/base/Compat.h:115:3: note:   template argument deduction/substitution failed:
+pruebanp.cc:40:49: error: template argument 1 is invalid
+     MPDU_m *ttmsg = check_and_cast<MPDU_m *>(msg);
+                                                 ^
+pruebanp.cc:41:45: error: ‘getIndex’ was not declared in this scope
+     if (ttmsg->getDestination() == getIndex()) {
+                                             ^
+pruebanp.cc:44:44: error: ‘bubble’ was not declared in this scope
+         bubble("ARRIVED, starting new one!");
+                                            ^
+pruebanp.cc:45:16: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+         delete ttmsg;
+                ^
+pruebanp.cc:48:17: error: ‘newmsg’ was not declared in this scope
+         MPDU_m *newmsg = generateMessage();
+                 ^
+pruebanp.cc:48:42: error: ‘generateMessage’ was not declared in this scope
+         MPDU_m *newmsg = generateMessage();
+                                          ^
+pruebanp.cc: At global scope:
+pruebanp.cc:57:1: error: ‘MPDU_m’ does not name a type
+ MPDU_m *Txc13::generateMessage()
+ ^
+pruebanp.cc:73:28: error: variable or field ‘forwardMessage’ declared void
+ void Txc13::forwardMessage(MPDU_m *msg)
+                            ^
+pruebanp.cc:73:28: error: ‘MPDU_m’ was not declared in this scope
+pruebanp.cc:73:36: error: ‘msg’ was not declared in this scope
+ void Txc13::forwardMessage(MPDU_m *msg)
+                                    ^
+Makefile:136: recipe for target 'out/gcc-debug//pruebanp.o' failed
+make: *** [out/gcc-debug//pruebanp.o] Error 1
+
+15:47:14 Build Finished (took 479ms)
+

@@ -1,0 +1,88 @@
+file 2666 1473386511                                            
+version 2
+run General-0-20160908-19:01:44-7806
+attr configname General
+attr datetime 20160908-19:01:44
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvars2 $repetition=0
+attr measurement ""
+attr network MisBoyas
+attr processid 7806
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+
+vector 6  MisBoyas.node[0].batteryStats  capacity  ETV
+attr unit  mW-s
+vector 7  MisBoyas.node[0].batteryStats  capacity(relative)  ETV
+vector 8  MisBoyas.node[0].batteryStats  estimate  ETV
+attr unit  mW-s
+vector 9  MisBoyas.node[0].batteryStats  estimate(relative)  ETV
+vector 17  MisBoyas.node[1].batteryStats  capacity  ETV
+attr unit  mW-s
+vector 18  MisBoyas.node[1].batteryStats  capacity(relative)  ETV
+vector 19  MisBoyas.node[1].batteryStats  estimate  ETV
+attr unit  mW-s
+vector 20  MisBoyas.node[1].batteryStats  estimate(relative)  ETV
+vector 28  MisBoyas.node[2].batteryStats  capacity  ETV
+attr unit  mW-s
+vector 29  MisBoyas.node[2].batteryStats  capacity(relative)  ETV
+vector 30  MisBoyas.node[2].batteryStats  estimate  ETV
+attr unit  mW-s
+vector 31  MisBoyas.node[2].batteryStats  estimate(relative)  ETV
+vector 39  MisBoyas.node[3].batteryStats  capacity  ETV
+attr unit  mW-s
+vector 40  MisBoyas.node[3].batteryStats  capacity(relative)  ETV
+vector 41  MisBoyas.node[3].batteryStats  estimate  ETV
+attr unit  mW-s
+vector 42  MisBoyas.node[3].batteryStats  estimate(relative)  ETV
+vector 50  MisBoyas.node[4].batteryStats  capacity  ETV
+attr unit  mW-s
+vector 51  MisBoyas.node[4].batteryStats  capacity(relative)  ETV
+vector 52  MisBoyas.node[4].batteryStats  estimate  ETV
+attr unit  mW-s
+vector 53  MisBoyas.node[4].batteryStats  estimate(relative)  ETV
+vector 61  MisBoyas.node[5].batteryStats  capacity  ETV
+attr unit  mW-s
+vector 62  MisBoyas.node[5].batteryStats  capacity(relative)  ETV
+vector 63  MisBoyas.node[5].batteryStats  estimate  ETV
+attr unit  mW-s
+vector 64  MisBoyas.node[5].batteryStats  estimate(relative)  ETV
+vector 72  MisBoyas.node[6].batteryStats  capacity  ETV
+attr unit  mW-s
+vector 73  MisBoyas.node[6].batteryStats  capacity(relative)  ETV
+vector 74  MisBoyas.node[6].batteryStats  estimate  ETV
+attr unit  mW-s
+vector 75  MisBoyas.node[6].batteryStats  estimate(relative)  ETV
+6	2292 17 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+7	2309 8 0 0 0 0 1 1 1 1 1
+8	2317 17 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+9	2334 8 0 0 0 0 1 1 1 1 1
+17	2342 18 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+18	2360 9 0 0 0 0 1 1 1 1 1
+19	2369 18 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+20	2387 9 0 0 0 0 1 1 1 1 1
+28	2396 18 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+29	2414 9 0 0 0 0 1 1 1 1 1
+30	2423 18 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+31	2441 9 0 0 0 0 1 1 1 1 1
+39	2450 18 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+40	2468 9 0 0 0 0 1 1 1 1 1
+41	2477 18 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+42	2495 9 0 0 0 0 1 1 1 1 1
+50	2504 18 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+51	2522 9 0 0 0 0 1 1 1 1 1
+52	2531 18 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+53	2549 9 0 0 0 0 1 1 1 1 1
+61	2558 18 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+62	2576 9 0 0 0 0 1 1 1 1 1
+63	2585 18 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+64	2603 9 0 0 0 0 1 1 1 1 1
+72	2612 18 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+73	2630 9 0 0 0 0 1 1 1 1 1
+74	2639 18 0 0 0 0 1 1187988120 1187988120 1187988120 1.4113157732611e+18
+75	2657 9 0 0 0 0 1 1 1 1 1
